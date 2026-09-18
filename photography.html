@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Photography | Joshua Steichen</title>
+  <link rel="stylesheet" href="styles-v4.css">
+</head>
+<body class="inner">
+  <header>
+    <a class="brand" href="index.html">JOSHUA <span>STEICHEN</span></a>
+    <nav><a href="video.html">Video</a><a class="active" href="photography.html">Photography</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav>
+  </header>
+  <main>
+    <section class="page-head">
+      <p class="kicker">STILL FRAMES</p>
+      <h1>Photo<em>graphy.</em></h1>
+      <p>A curated collection of travel, landscapes, wildlife and documentary moments. Select a frame below to bring it forward.</p>
+    </section>
+    <section class="photo-film">
+      <div class="photo-stage">
+        <div class="photo-stage-main"><img id="photo-stage-image" src="assets/photos_v10/p15.jpg" alt="Delicate Arch sunrise"></div>
+        <div class="filmstrip-label"><span>Selected frame</span><span id="photo-counter">01 / 48</span></div>
+      </div>
+      <div class="filmstrip" id="photo-filmstrip"></div>
+      <p class="photo-note">A broader selection from the archive, curated to show range across travel, landscapes, wildlife and documentary work.</p>
+    </section>
+  </main>
+  <div class="photo-lightbox" id="photo-lightbox" aria-hidden="true"><button class="photo-lightbox-close" aria-label="Close full image">×</button><img id="photo-lightbox-image" alt=""><span class="photo-lightbox-hint">Click anywhere to close</span></div>
+  <footer><span>© <span id="year"></span> Joshua Steichen</span><a href="index.html">Back home</a></footer>
+  <script src="script-v4.js"></script>
+</body>
+</html>

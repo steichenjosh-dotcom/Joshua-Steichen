@@ -1,0 +1,3 @@
+document.getElementById('year').textContent=new Date().getFullYear();
+const menu=document.querySelector('.menu'),nav=document.querySelector('.nav nav');menu.onclick=()=>nav.classList.toggle('open');nav.querySelectorAll('a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));
+const lb=document.querySelector('.lightbox'),lbi=lb.querySelector('img');document.querySelectorAll('.photo-card img').forEach(img=>img.onclick=()=>{lbi.src=img.src;lb.classList.add('open');lb.setAttribute('aria-hidden','false')});lb.querySelector('button').onclick=()=>{lb.classList.remove('open');lb.setAttribute('aria-hidden','true')};lb.onclick=e=>{if(e.target===lb)lb.querySelector('button').click()};
