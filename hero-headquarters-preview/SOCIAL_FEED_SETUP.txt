@@ -1,0 +1,13 @@
+LIVE SOCIAL FEED SETUP (NOT YET CONNECTED)
+
+The site shows recent social posts from assets/social-feed.json when populated.
+The initial feed contains no posts; none are invented.
+
+Have the shop authorize access to its Facebook Page / professional Instagram account.
+Use a supported Meta API integration or licensed social-feed provider with a server-side job to refresh social-feed.json regularly.
+Do not store API tokens inside public GitHub Pages files.
+
+Feed JSON shape:
+{"posts":[{"platform":"instagram","url":"https://www.instagram.com/p/REAL_POST_ID/","image":"https://.../authorized-image.jpg","caption":"...","date":"2026-10-12"}]}
+
+The site itself is static and can host on GitHub Pages once the authorized feed generation job is configured.
