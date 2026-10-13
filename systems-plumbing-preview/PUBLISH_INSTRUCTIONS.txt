@@ -1,0 +1,10 @@
+SYSTEMS PLUMBING - GITHUB PAGES DEMO
+
+Upload all files and the entire assets folder INTO systems-plumbing-preview on branch main in github.com/steichenjosh-dotcom/Joshua-Steichen.
+Do not upload the ZIP itself or create a second nested folder.
+
+Expected URL after deployment:
+https://www.joshuasteichen.com/systems-plumbing-preview/
+
+All six pages are included. Google Analytics GA4 ID G-PW32HSWKM6 is installed.
+This is an unofficial concept demo, not an official site.

@@ -1,0 +1,1 @@
+Systems Plumbing v4 — restored v2 original layout, typography, colors and navigation. Changed photography only, moved homepage caption below the image, and removed decorative header/brand lines. Real team group and leadership portraits remain on About only. Stock photos included locally. Contact form remains an email-client demo.
