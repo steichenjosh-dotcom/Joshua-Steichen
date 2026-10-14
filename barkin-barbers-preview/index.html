@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#315a40">
+  <meta name="description" content="Barkin Barbers is a neighborhood dog grooming salon in Westminster, Colorado. Explore grooming services and visit our Westminster location.">
+  <title>Barkin Barbers | Dog Grooming in Westminster, CO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green:#315a40;--green-dark:#254632;--sage:#8eab8d;--ink:#262c26;--muted:#657169;
+      --warm:#f8f8f3;--warm2:#f1f5ef;--border:#e8ede6;--white:#fff;
+      --serif:'DM Serif Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif;
+      --shadow:0 18px 52px rgba(29,53,37,.09);--shadow-sm:0 8px 30px rgba(27,40,32,.08)
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:#fff;color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.62}
+    img{max-width:100%;display:block} a{text-decoration:none;color:inherit} button{font:inherit}
+    a:focus-visible,button:focus-visible{outline:3px solid #8cb998;outline-offset:4px}
+    ::selection{background:#dbeade}
+    .container{max-width:1200px;margin:auto;padding:0 30px}
+    .eyebrow{color:var(--green);text-transform:uppercase;letter-spacing:.23em;font-size:11px;font-weight:700}
+    .display,h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.07;letter-spacing:-.025em}
+    h1{font-size:clamp(46px,5.3vw,76px);margin:15px 0 20px}
+    h2{font-size:clamp(34px,3.9vw,54px);margin:12px 0 15px}
+    h3{font-size:26px;margin:12px 0 8px}
+    p{color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 23px;border:1px solid var(--green);border-radius:8px;background:var(--green);color:white;font-weight:700;font-size:13px;transition:transform .2s,background .2s,box-shadow .2s;cursor:pointer;white-space:nowrap}
+    .btn:hover{background:var(--green-dark);transform:translateY(-2px);box-shadow:0 9px 18px rgba(49,90,64,.15)}
+    .btn-outline{background:white;color:var(--green)} .btn-outline:hover{background:var(--warm2)} .arrow{font-size:19px;line-height:1}
+    .header{background:rgba(255,255,255,.96);position:sticky;z-index:30;top:0;border-bottom:1px solid rgba(230,235,228,.75);backdrop-filter:blur(12px)}
+    .header-inner{min-height:87px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:11px;color:var(--green);min-width:max-content}
+    .brand-icon{height:38px;width:38px}.brand-text{display:flex;flex-direction:column;align-items:flex-start}.brand-name{display:block;font-family:var(--serif);font-size:29px;line-height:.96}.brand-sub{display:block;font-size:9px;letter-spacing:.34em;text-align:left;margin-top:8px;margin-left:4px;font-weight:700}
+    .nav{display:flex;align-items:center;gap:27px}.nav a{font-size:13px;font-weight:600;color:#505c53}.nav a:hover{color:var(--green)}
+    .header-cta{padding:12px 18px}.menu-toggle{display:none;border:1px solid var(--border);background:white;width:44px;height:44px;border-radius:12px;font-size:25px;color:var(--green);cursor:pointer}
+    .demo-bar{background:#eef3ed;text-align:center;font-size:11px;letter-spacing:.05em;color:#536559;padding:7px 15px}
+
+    .hero{padding:78px 0 85px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:48px;align-items:center}
+    .hero-copy{max-width:540px}.hero-copy>p{max-width:470px;font-size:16px;margin:0 0 26px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}.trust{display:flex;flex-wrap:wrap;gap:22px;margin-top:33px}
+    .trust-item{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;line-height:1.35;color:#66746a}.trust-symbol{font-size:22px;color:var(--sage)}
+    .hero-media{position:relative;padding:0 0 24px}.storefront{height:520px;object-fit:cover;object-position:64% center;width:100%;border-radius:14px;box-shadow:var(--shadow-sm)}
+    .pet-photo{position:absolute;left:-34px;bottom:-12px;width:196px;height:220px;object-fit:cover;border:8px solid white;border-radius:22px;box-shadow:var(--shadow);background:#ecf2e8}
+    .scribble{position:absolute;right:18px;bottom:16px;background:rgba(255,255,255,.94);padding:16px 22px;border-radius:6px;font-family:var(--serif);font-size:19px;color:var(--green);text-align:center}
+    .paw svg{width:100%;height:100%;fill:currentColor}
+
+    .section{padding:74px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 35px}.section-head p{margin:0}
+    .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+    .service{overflow:hidden;background:#fff;border:1px solid #e8ebe5;border-radius:12px;transition:transform .25s,box-shadow .25s;box-shadow:none}
+    .service:hover{transform:translateY(-5px);box-shadow:var(--shadow-sm)}
+    .service-photo{width:100%;height:182px;object-fit:cover;background:#e4ebe2}
+    .service-body{padding:22px 20px 24px}.service h3{font-size:24px;margin:4px 0 8px}.service p{font-size:13px;line-height:1.6;margin:0}.number{color:#90a990;font-size:11px;font-weight:700;letter-spacing:.14em}
+
+    .about-panel{display:grid;grid-template-columns:.96fr 1.04fr;gap:28px;background:#f3f6f0;border-radius:18px;padding:24px;align-items:center}
+    .about-image-wrap{position:relative}.about-img{height:420px;width:100%;object-fit:cover;border-radius:14px;box-shadow:var(--shadow-sm)}
+    .about-badge{position:absolute;left:16px;bottom:16px;background:rgba(255,255,255,.95);padding:14px 16px;border-radius:8px;font-size:12px;color:#4e6256;max-width:250px;box-shadow:var(--shadow-sm)}
+    .about-copy{padding:16px 22px 16px 4px}.about-copy p{font-size:14px;max-width:480px}.about-checks{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 20px;margin:27px 0}.about-checks span{font-size:12px;font-weight:700;color:#46664d}.about-checks span:before{content:'✦';padding-right:8px;color:#8ba78b}
+
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.gallery-card{background:#fff;border:1px solid #e9eee8;border-radius:14px;overflow:hidden;box-shadow:none;transition:transform .2s,box-shadow .2s}.gallery-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+    .gallery-img{height:275px;object-fit:cover;width:100%;background:#e5ece3}.gallery-caption{padding:16px 16px 18px}.gallery-caption strong{display:block;font-size:14px;color:var(--ink);margin-bottom:3px}.gallery-caption span{font-size:12px;color:var(--muted)}
+    .note{font-size:12px;color:#748078;text-align:center;margin-top:20px}
+
+    .contact-wrap{background:var(--warm);border-radius:18px;padding:52px 55px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+    .contact-wrap h2{margin:10px 0 14px}.contact-wrap p{font-size:14px;max-width:410px}.contact-list{display:grid;gap:18px;padding-left:20px}
+    .contact-row{display:flex;gap:16px;align-items:flex-start}.contact-icon{width:41px;height:41px;border-radius:50%;background:#e6efe3;color:var(--green);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+    .contact-row strong{display:block;font-size:14px}.contact-row span,.contact-row a{font-size:13px;color:var(--muted)}.contact-row a{text-decoration:underline;text-underline-offset:3px}
+    .closing{padding:22px 0 65px;text-align:center}.closing p{font-size:13px}
+    .footer{background:var(--green-dark);color:white;padding:35px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer .brand{color:white}.footer .brand-name{font-size:23px}.footer .brand-icon{width:32px;height:32px}.footer p{color:#d3e0d6;font-size:12px;margin:0;text-align:right}.footer-links{display:flex;gap:16px;font-size:12px}.footer-links a:hover{text-decoration:underline}
+    .photo-credit{font-size:11px;color:#859086;text-align:center;padding:12px}.photo-credit a{text-decoration:underline}
+
+
+    .social-section{background:#f7faf6;border-top:1px solid #edf1eb;border-bottom:1px solid #edf1eb}
+    .social-inner{display:grid;grid-template-columns:.82fr 1.18fr;gap:65px;align-items:center}
+    .social-copy h2{max-width:420px}.social-copy p{font-size:15px;max-width:410px;margin-bottom:22px}
+    .social-label{display:flex;align-items:center;gap:10px;color:#315a40;font-weight:700;font-size:13px;margin-bottom:12px}
+    .facebook-mark{width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;background:#315a40;color:white;border-radius:50%;font-weight:700;font-family:Arial,sans-serif;font-size:23px;padding-top:6px}
+    .social-feed{background:white;border:1px solid #e6ece4;border-radius:18px;padding:19px;box-shadow:0 10px 42px rgba(26,49,34,.05)}
+    .feed-title{display:flex;align-items:center;gap:12px;margin-bottom:17px}.feed-title strong{font-family:var(--serif);font-size:24px;line-height:1.1}.feed-title span:last-child{display:block;color:#758477;font-size:12px}
+    .facebook-embed{display:block;width:100%;height:500px;border:0;background:#f8faf7;border-radius:8px}
+    .feed-disclaimer{font-size:11px;margin:12px 0 0;color:#708075}
+    @media(max-width:900px){.social-inner{grid-template-columns:1fr;gap:25px}.social-copy h2{max-width:none}}
+    @media(max-width:480px){.social-feed{padding:12px}.facebook-embed{height:430px}}
+    @media(max-width:1000px){.nav{gap:15px}.hero-grid{gap:30px}.storefront{height:430px}.services-grid{grid-template-columns:repeat(2,1fr)}.service-photo{height:200px}.about-panel{gap:24px;grid-template-columns:1fr}.about-copy{padding:6px 8px 12px}.gallery{grid-template-columns:1fr 1fr}}
+    @media(max-width:760px){.container{padding:0 20px}.header-inner{min-height:72px}.brand-name{font-size:24px}.brand-icon{width:33px;height:33px}.header-cta{display:none}.menu-toggle{display:block}.nav{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:17px 23px 25px;box-shadow:0 15px 25px rgba(20,40,25,.08);flex-direction:column;align-items:stretch;gap:0}.nav.is-open{display:flex}.nav a{padding:11px 0}.hero{padding:42px 0 55px}.hero-grid{grid-template-columns:1fr;gap:38px}.storefront{height:350px}.pet-photo{width:140px;height:150px;left:-4px}.scribble{right:8px;bottom:8px;font-size:15px;padding:12px}.section{padding:55px 0}.gallery{grid-template-columns:1fr}.contact-wrap{grid-template-columns:1fr;padding:35px 27px}.contact-list{padding:0}.footer-inner{flex-direction:column;align-items:flex-start}.footer p{text-align:left}}
+    @media(max-width:480px){h1{font-size:48px}.hero-actions .btn{flex:1;padding:13px 11px;font-size:12px}.trust{gap:13px}.storefront{height:280px}.pet-photo{width:118px;height:123px;border-width:5px}.services-grid{gap:10px}.service-photo{height:125px}.service-body{padding:13px}.service h3{font-size:20px}.service p{font-size:12px}.gallery{gap:10px}.gallery-img{height:220px}.about-checks{grid-template-columns:1fr}.contact-wrap{padding:30px 22px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="demo-bar">INDEPENDENT WEBSITE REDESIGN CONCEPT · NOT AN OFFICIAL BARKIN BARBERS WEBSITE</div>
+  <header class="header"><div class="container header-inner">
+    <a class="brand" href="#home" aria-label="Barkin Barbers home"><span class="brand-icon paw" aria-hidden="true"><svg viewBox="0 0 48 48"><ellipse cx="13" cy="13" rx="5" ry="7" transform="rotate(-20 13 13)"/><ellipse cx="25" cy="8" rx="5" ry="7"/><ellipse cx="37" cy="14" rx="5" ry="7" transform="rotate(20 37 14)"/><ellipse cx="7" cy="26" rx="4" ry="6" transform="rotate(-28 7 26)"/><path d="M11 39c-2-6 5-9 9-16 2-4 8-4 10 0 4 7 11 10 9 16-2 6-9 5-14 2-5-2-12 4-14-2z"/></svg></span><span class="brand-text"><span class="brand-name">Barkin Barbers</span><span class="brand-sub">DOG GROOMING</span></span></a>
+    <nav class="nav" id="site-nav" aria-label="Main navigation"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#social">Facebook</a><a href="#contact">Contact</a></nav>
+    <a class="btn header-cta" href="#services">View Services <span class="arrow">↗</span></a><button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+  </div></header>
+  <main>
+    <section class="hero" id="home"><div class="container hero-grid">
+      <div class="hero-copy"><span class="eyebrow">A little pampering goes a long way</span><h1>Good dogs.<br>Great grooms.<br><em style="color:var(--green)">Happy tails.</em></h1><p>Fresh baths, thoughtful trims, and a little extra love. Neighborhood dog grooming in Westminster, Colorado — because every pup deserves to feel their best.</p><div class="hero-actions"><a class="btn" href="#services">Discover Our Services <span class="arrow">↗</span></a><a class="btn btn-outline" href="#contact">Visit Our Salon</a></div><div class="trust"><span class="trust-item"><span class="trust-symbol">♡</span> Gentle, caring service</span><span class="trust-item"><span class="trust-symbol">✂</span> Grooming & trims</span><span class="trust-item"><span class="trust-symbol">✧</span> Local Westminster salon</span></div></div>
+      <div class="hero-media"><img class="storefront" src="assets/storefront.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=1200&q=85'" alt="Dog grooming storefront at a Westminster shopping center" fetchpriority="high"><img class="pet-photo" src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=900&q=80" alt="Well-groomed small dog portrait"><div class="scribble">A fresh look,<br>one happy pup!</div></div>
+    </div></section>
+
+    <section class="section" id="services"><div class="container"><div class="section-head"><span class="eyebrow">Our grooming services</span><h2>Everything your pup needs.</h2><p>From bath time to a fresh new cut, caring grooming made simple.</p></div><div class="services-grid">
+      <article class="service"><img class="service-photo" src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=1200&q=80" alt="Clean fluffy dog after a bath"><div class="service-body"><span class="number">01 / CLEAN & FRESH</span><h3>Bath & Brush</h3><p>A thorough cleanse, careful brushing, and a fresh, happy feeling.</p></div></article>
+      <article class="service"><img class="service-photo" src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=1200&q=80" alt="Stylish dog portrait with neat grooming"><div class="service-body"><span class="number">02 / A NEW LOOK</span><h3>Full Grooming</h3><p>Haircuts and coat care personalized to your dog's needs.</p></div></article>
+      <article class="service"><img class="service-photo" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1200&q=80" alt="Close-up of a groomed dog's paws"><div class="service-body"><span class="number">03 / THE DETAILS</span><h3>Nail Care</h3><p>A little paw maintenance goes a long way toward comfort.</p></div></article>
+      <article class="service"><img class="service-photo" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=1200&q=80" alt="Happy dog with polished, well-kept coat"><div class="service-body"><span class="number">04 / EXTRA LOVE</span><h3>Finishing Touches</h3><p>Ask about available add-on grooming and care options.</p></div></article>
+    </div><p class="note">Services shown are a demo overview. Confirm availability and current pricing with the salon.</p></div></section>
+
+    <section class="section" id="about"><div class="container"><div class="about-panel"><div class="about-image-wrap"><img class="about-img" src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1400&q=80" alt="Professional groomer holding a small dog in a polished salon setting"><div class="about-badge"><strong>Calm, caring visits.</strong><br>Designed to feel warm, clean, and easy for pets and owners alike.</div></div><div class="about-copy"><span class="eyebrow">A local favorite</span><h2>Big love for<br>little details.</h2><p>We believe a great grooming experience starts with kindness. Barkin Barbers serves local dog owners in Westminster with hands-on attention and practical grooming care.</p><p>Whether your pup needs a tidy-up or a full refresh, every visit is built around comfort, patience, and a polished finish.</p><div class="about-checks"><span>Dog grooming</span><span>Coat maintenance</span><span>Gentle handling</span><span>Neighborhood convenience</span></div><a class="btn" href="#contact">Visit Our Salon <span class="arrow">↗</span></a></div></div></div></section>
+
+    <section class="section" id="gallery"><div class="container"><div class="section-head"><span class="eyebrow">Our approach</span><h2>Care in every detail.</h2><p>Thoughtful grooming, comfortable visits, and a polished finish.</p></div><div class="gallery">
+      <article class="gallery-card"><img class="gallery-img" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1400&q=80" alt="Beautifully groomed dog portrait"><div class="gallery-caption"><strong>Freshly groomed.</strong><span>Clean coats, bright eyes, and a polished look.</span></div></article>
+      <article class="gallery-card"><img class="gallery-img" src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=1400&q=80" alt="Refined dog portrait with soft neutral styling"><div class="gallery-caption"><strong>Comfort first.</strong><span>A calm experience with a gentle touch throughout.</span></div></article>
+      <article class="gallery-card"><img class="gallery-img" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=1400&q=80" alt="Happy dog with neat trim looking at camera"><div class="gallery-caption"><strong>Happy results.</strong><span>Every detail is meant to help pets leave feeling their best.</span></div></article>
+    </div><p class="note">Photography in this concept is curated as premium placeholder imagery for presentation purposes.</p></div></section>
+
+    <section class="section social-section" id="social" aria-labelledby="social-heading"><div class="container social-inner">
+      <div class="social-copy"><span class="eyebrow">Stay connected</span><h2 id="social-heading">The latest from Barkin Barbers.</h2><p>See fresh grooming photos, salon updates, and what’s happening in the Barkin Barbers community, straight from their Facebook page.</p><a class="btn" href="https://www.facebook.com/Barkinbarbers.1/" target="_blank" rel="noopener noreferrer">Visit Their Facebook Page <span class="arrow">↗</span></a></div>
+      <div class="social-feed"><div class="feed-title"><span class="facebook-mark" aria-hidden="true">f</span><div><strong>Barkin Barbers</strong><span>Facebook updates and posts</span></div></div>
+        <iframe class="facebook-embed" title="Barkin Barbers Facebook page timeline" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBarkinbarbers.1%2F&amp;tabs=timeline&amp;width=500&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=false" loading="lazy" allow="encrypted-media" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <p class="feed-disclaimer">Facebook controls which posts can appear in embedded timelines. If posts aren’t visible in your browser, <a href="https://www.facebook.com/Barkinbarbers.1/" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">open their Facebook page directly ↗</a>.</p>
+      </div>
+    </div></section>
+    <section class="section" id="contact"><div class="container"><div class="contact-wrap"><div><span class="eyebrow">Come say hello</span><h2>Your pup's next<br>good hair day awaits.</h2><p>Discover our location in Westminster, and find everything you need to plan your visit.</p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Barkin+Barbers+4955+W+72nd+Ave+Westminster+CO" target="_blank" rel="noopener noreferrer">Get Directions <span class="arrow">↗</span></a></div><div class="contact-list"><div class="contact-row"><div class="contact-icon">⌖</div><div><strong>Find the salon</strong><span>4955 W 72nd Ave, Unit I<br>Westminster, CO 80030</span><br><a href="https://www.google.com/maps/search/?api=1&query=Barkin+Barbers+4955+W+72nd+Ave+Westminster+CO" target="_blank" rel="noopener noreferrer">Get directions ↗</a></div></div><div class="contact-row"><div class="contact-icon">☎</div><div><strong>Phone</strong><span>(303) 428-3848</span></div></div><div class="contact-row"><div class="contact-icon">◷</div><div><strong>Reported business hours</strong><span>Tuesday–Saturday: 8 AM–5 PM<br>Sunday & Monday: Closed</span><br><span>Hours may change; please verify before visiting.</span></div></div><div class="contact-row"><div class="contact-icon">f</div><div><strong>Follow on Facebook</strong><a href="https://www.facebook.com/Barkinbarbers.1/" target="_blank" rel="noopener noreferrer">facebook.com/Barkinbarbers.1 ↗</a><br><span>Stay connected for updates and salon news.</span></div></div></div></div></div></section>
+    <div class="container closing"><span class="eyebrow">Barkin Barbers · Westminster, Colorado</span><p>A little grooming. A lot of tail wags. ♡</p></div>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><a href="#home" class="brand"><span class="brand-icon paw" aria-hidden="true"><svg viewBox="0 0 48 48"><ellipse cx="13" cy="13" rx="5" ry="7" transform="rotate(-20 13 13)"/><ellipse cx="25" cy="8" rx="5" ry="7"/><ellipse cx="37" cy="14" rx="5" ry="7" transform="rotate(20 37 14)"/><ellipse cx="7" cy="26" rx="4" ry="6" transform="rotate(-28 7 26)"/><path d="M11 39c-2-6 5-9 9-16 2-4 8-4 10 0 4 7 11 10 9 16-2 6-9 5-14 2-5-2-12 4-14-2z"/></svg></span><span class="brand-text"><span class="brand-name">Barkin Barbers</span><span class="brand-sub">DOG GROOMING</span></span></a><div><p>Independent redesign concept · Not affiliated with Barkin Barbers</p><p>Built as a visual demonstration, not an active booking platform.</p><p><a href="https://www.facebook.com/Barkinbarbers.1/" target="_blank" rel="noopener noreferrer" style="color:#d3e0d6;text-decoration:underline;text-underline-offset:3px;">Visit the Barkin Barbers Facebook page ↗</a></p></div></div></footer>
+  <script>
+    const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav');
+    toggle.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close menu':'Open menu');toggle.textContent=open?'×':'☰'});
+    nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));
+  </script>
+</body>
+</html>
