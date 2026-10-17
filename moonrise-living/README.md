@@ -8,7 +8,7 @@ By Moonrise House, LLC · October 2026
 - Form Nine — automotive concept + visual finish simulator: https://www.joshuasteichen.com/moonrise-living/form-nine/
 - Sable & Soft — wellness concept + ritual finder: https://www.joshuasteichen.com/moonrise-living/sable-soft/
 - Paper & Pleat — black/cream fashion concept + interactive lookbook: https://www.joshuasteichen.com/moonrise-living/paper-pleat/
-- Marlow Kitchen — neighborhood restaurant concept + dietary-aware dish finder and order handoff: https://www.joshuasteichen.com/moonrise-living/marlow-kitchen/
+- Nookside Kitchen — neighborhood restaurant concept + dietary-aware dish finder and order handoff: https://www.joshuasteichen.com/moonrise-living/nookside-kitchen/
 
 All five featured brands are **fictional**, not actual clients or operating businesses. There is no real checkout or booking. The pet prices and wellness recommendations are illustrative; the automotive comparison uses photographic styling filters, not a real detailing result. Never present these concepts as completed paid client engagements.
 
@@ -22,7 +22,7 @@ The legacy /moonrise-living/el-dogo/ page now redirects to fictional Mallow + Mo
 - form-nine/index.html — automotive styling + local compare effect.
 - sable-soft/index.html — wellness styling + local ritual finder.
 - paper-pleat/index.html — fashion styling + local lookbook UI; updated to high-contrast black/cream with stronger display type.
-- marlow-kitchen/index.html — neighborhood restaurant styling, three sample dishes, a dietary-aware dish recommender and order buttons with a safe fictional fallback.
+- nookside-kitchen/index.html — neighborhood restaurant styling, three sample dishes, a dietary-aware dish recommender and order buttons with a safe fictional fallback.
 - index.html — portfolio home, four links, introductory pricing.
 
 The non-pet sites presently use unique, standalone CSS and JS to demonstrate very different art direction. Future efficiencies will come from extracting repeated functions and refining the handoff process; these are portfolio prototypes, not a one-click website factory.
@@ -38,7 +38,7 @@ Use 50% upfront deposit, two consolidated revision rounds, a written page/featur
 ## Restaurant order link integration
 
 1. Before going live, get the restaurant's ACTUAL guest-facing pickup and delivery URLs from the owner (Toast, Square, ChowNow, etc). Never guess URLs.
-2. Edit the Marlow template's inline JavaScript near its end: `const ORDER_LINKS={pickup:"",delivery:""};`.
+2. Edit the Nookside template's inline JavaScript near its end: `const ORDER_LINKS={pickup:"",delivery:""};`.
 3. Put the verified HTTPS URLs inside the quoted strings. Leave a channel blank if not supported by the restaurant; customize or remove its button for production instead of implying the option is available.
 4. When configured, all buttons labeled Order Pickup / Order Delivery open the correct existing ordering page in a new tab. If blank, the fictional demo buttons open an informative modal and make NO order.
 5. Replace the fictional menu photos, pricing, ingredients, vegetarian/vegan tags and brand name with approved assets. The finder does not validate allergies, cross-contact or availability; add a disclaimer and confirm all menu dietary claims with the owner.
@@ -52,7 +52,7 @@ Use 50% upfront deposit, two consolidated revision rounds, a written page/featur
 - Form Nine: larger full-width visual simulator, closer auto detail photograph, stronger base/enhanced difference and visible drag handle; photographic filters still explicitly NOT a real service before/after.
 - Sable & Soft: no changes.
 - Paper & Pleat: black-and-cream high-fashion palette with muted clay accent and heavier readable display typography.
-- Marlow Kitchen: new approachable neighborhood restaurant category and demo ordering buttons.
+- Nookside Kitchen: new approachable neighborhood restaurant category and demo ordering buttons.
 
 ## Lead generation, in order
 
