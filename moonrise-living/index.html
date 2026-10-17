@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071725">
+  <meta name="description" content="Moonrise Living by Moonrise House — editorial, cinematic websites with interactive experiences built for real businesses.">
+  <title>Moonrise Living | Web Experiences by Moonrise House</title>
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--night:#071725;--blue:#aabed0;--pale:#f3f1ed;--line:#3b5262;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--night);color:#f7f6f2;font-family:var(--sans);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button{font:inherit}.shell{width:min(1200px,calc(100% - 100px));margin:auto}
+    .skip{position:absolute;top:-70px;left:16px;background:white;color:#071725;padding:10px}.skip:focus{top:10px}a:focus-visible{outline:2px solid #d2d7d0;outline-offset:5px}
+    header{height:100px;display:flex;align-items:center;border-bottom:1px solid #ffffff20;background:#071725b5;position:sticky;top:0;z-index:20;backdrop-filter:blur(18px)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}.identity{display:flex;gap:18px;align-items:center}.identity img{width:69px;height:43px;object-fit:contain}.identity strong{font-size:15px;letter-spacing:.16em;font-weight:600;white-space:nowrap}
+    .nav-links{display:flex;align-items:center;gap:36px;font-size:11px;font-weight:700;letter-spacing:.045em}.nav-links a:hover,.footer a:hover{color:var(--blue)}
+    .nav-cta{padding:12px 18px;border:1px solid #91a9bb;border-radius:2px}
+    .eyebrow{font-size:10px;letter-spacing:.27em;font-weight:700;color:#b2c5d0}.hero{min-height:690px;background-image:linear-gradient(90deg,#071725eb 0%,#071725c8 45%,#0717255e 100%),url('../assets/home-night.webp');background-size:cover;background-position:center;display:flex;align-items:center;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;inset:40px 6%;border:1px solid #ffffff1b;pointer-events:none}
+    .hero-inner{position:relative;z-index:1;padding:100px 50px 125px}.hero h1{font:400 clamp(70px,9vw,135px)/.95 var(--serif);letter-spacing:-.049em;max-width:900px;margin:30px 0}
+    .hero h1 em{font-weight:400;color:#bfd4df}.hero p{font-size:14px;line-height:1.9;color:#ced9dd;max-width:500px}
+    .actions{display:flex;gap:32px;align-items:center;margin-top:34px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;gap:35px;border:1px solid #eff3f0;background:#f1f4f2;color:#102331;padding:17px 21px;font-size:12px;font-weight:700;transition:transform .25s,background .25s}.button:hover{transform:translateY(-3px);background:#c6d7dd}.quiet-link{font-size:12px;border-bottom:1px solid #9cadb7;padding-bottom:7px}
+    .hero-bottom{position:absolute;bottom:33px;left:calc((100% - min(1200px,100% - 100px))/2);font-size:10px;letter-spacing:.2em;color:#a9bac5;z-index:1}
+    .intro{padding:110px 0 93px;background:var(--pale);color:#102431}
+    .intro-head{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:70px;margin-bottom:56px}
+    .intro h2,.feature h2,.closing h2{font:400 clamp(49px,5.7vw,82px)/1.05 var(--serif);letter-spacing:-.045em;margin:14px 0 0}
+    .intro h2 em,.feature h2 em{color:#4b7487}
+    .intro-head p{font-size:14px;color:#50636f;line-height:1.9;max-width:510px}
+    .pillars{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #aebdc6}
+    .pillar{padding:31px 32px 0 0;border-right:1px solid #bac6cc}.pillar+ .pillar{padding-left:32px}.pillar:last-child{border-right:0}
+    .pillar span{font-size:12px;color:#628095;font-weight:700}.pillar h3{font-size:20px;margin:24px 0 13px}.pillar p{font-size:12px;line-height:1.8;color:#60717a}
+    .feature{background:#0b1f2b;padding:110px 0 125px}.feature-top{display:flex;justify-content:space-between;align-items:end;gap:50px;margin-bottom:50px}
+    .feature-top p{font-size:14px;max-width:410px;line-height:1.9;color:#aebfc7}.feature h2{font-size:clamp(55px,7vw,98px)}
+    .feature-card{display:grid;grid-template-columns:1.1fr .9fr;background:#132b36;overflow:hidden;border:1px solid #304954}
+    .feature-card img{width:100%;height:490px;object-fit:cover}
+    .feature-copy{padding:70px 65px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+    .feature-copy span{font-size:10px;letter-spacing:.23em;color:#b5cad0;font-weight:700}.feature-copy h3{font:400 71px/1.05 var(--serif);letter-spacing:-.04em;margin:24px 0 18px}
+    .feature-copy h3 em{color:#c4d9b9}.feature-copy p{font-size:14px;color:#c3ced0;line-height:1.8;max-width:355px;margin-bottom:26px}
+    .feature-note{font-size:10px;color:#95acb4;margin-top:18px;line-height:1.7}
+    .closing{background:#e8eef0;color:#102633;text-align:center;padding:100px 0 110px}.closing h2{max-width:680px;margin:13px auto 23px}.closing p{font-size:14px;color:#506b77;margin:0 auto 28px;max-width:540px;line-height:1.8}
+    .closing .button{background:#102c3a;color:#f4f5f4}.closing .button:hover{background:#345464}
+    .footer{padding:33px 0;background:#071725}.footer .shell{display:flex;justify-content:space-between;align-items:center;gap:25px;flex-wrap:wrap}.footer span{font-size:11px;color:#a8bcc6}.footer a{font-size:11px}
+    @media(max-width:900px){.shell{width:calc(100% - 56px)}header{height:75px}.nav-links{gap:16px}.hero{min-height:620px}.hero-inner{padding:90px 25px}.hero-bottom{left:28px}.feature-copy{padding:45px 36px}.feature-copy h3{font-size:58px}.feature-card img{height:440px}}
+    @media(max-width:650px){.shell{width:calc(100% - 38px)}.nav{gap:8px}.identity{gap:6px}.identity img{width:42px}.identity strong{font-size:11px;letter-spacing:.12em}.nav-links a:not(.nav-cta){display:none}.nav-links{gap:0}.nav-cta{font-size:10px;padding:11px}.hero{min-height:640px;background-position:60% 50%}.hero:after{inset:20px 11px}.hero-inner{padding:89px 0 100px}.hero h1{font-size:clamp(62px,14vw,98px)}.hero p{font-size:13px;max-width:310px}.actions{align-items:flex-start;flex-direction:column;gap:25px}.hero-bottom{font-size:8px;bottom:26px;left:19px}.intro{padding:76px 0}.intro-head{grid-template-columns:1fr;gap:10px;margin-bottom:29px}.intro h2{font-size:60px}.pillars{grid-template-columns:1fr}.pillar,.pillar+.pillar{border-right:0;border-bottom:1px solid #b5c1c7;padding:25px 0}.pillar:last-child{border-bottom:0}.pillar h3{margin:12px 0 4px}.feature{padding:73px 0 82px}.feature-top{display:block}.feature-top h2{font-size:65px}.feature-card{grid-template-columns:1fr}.feature-card img{height:310px}.feature-copy{padding:34px 24px 40px}.feature-copy h3{font-size:60px}.closing{padding:75px 0}.closing h2{font-size:62px}.footer .shell{justify-content:center;text-align:center}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header><div class="shell nav"><a class="identity" href="../index.html" aria-label="Moonrise House home"><img src="../assets/moonrise-primary-symbol.png" alt=""><strong>MOONRISE HOUSE</strong></a><nav class="nav-links" aria-label="Main navigation"><a href="#method">The idea</a><a href="#preview">Live example</a><a class="nav-cta" href="../contact.html">Start a project ↗</a></nav></div></header>
+  <main id="main">
+    <section class="hero"><div class="shell hero-inner"><div class="eyebrow">INTRODUCING MOONRISE LIVING / WEB EXPERIENCES</div><h1>Not another website.<br><em>A brand you can feel.</em></h1><p>Cinematic first impressions. Thoughtful interaction. Bespoke visual storytelling on a smarter, repeatable foundation.</p><div class="actions"><a class="button" href="#preview">Explore a living website <span aria-hidden="true">↗</span></a><a class="quiet-link" href="#method">How it works ↓</a></div></div><div class="hero-bottom">CREATIVE TECHNOLOGY · MADE HUMAN &nbsp; ↓</div></section>
+    <section id="method" class="intro"><div class="shell"><div class="intro-head"><div><div class="eyebrow" style="color:#5a7889">A NEW APPROACH TO SMALL BUSINESS WEBSITES</div><h2>Beautiful is good.<br><em>Useful is better.</em></h2></div><p>We combine professional art direction with carefully chosen interactive features that give visitors a reason to engage. One flexible system keeps the production efficient, while the visual personality stays true to each brand.</p></div><div class="pillars"><article class="pillar"><span>01 / THE FIRST IMPRESSION</span><h3>Cinematic by design</h3><p>Immersive photography, beautiful typography, and restrained motion inspired by editorial campaigns.</p></article><article class="pillar"><span>02 / THE HUMAN MOMENT</span><h3>Interaction with purpose</h3><p>A grooming guide, service finder, project selector or visual lookbook — something useful rather than another gimmick.</p></article><article class="pillar"><span>03 / THE SMART FOUNDATION</span><h3>Built to be repeatable</h3><p>Fast-loading pages powered by lightweight, reusable components. No bloated plugins or unnecessary ongoing tech expense.</p></article></div></div></section>
+    <section id="preview" class="feature"><div class="shell"><div class="feature-top"><div><div class="eyebrow">THE FIRST LIVING CONCEPT</div><h2>See it in <em>motion.</em></h2></div><p>A real, functional example of a website concept designed for one business — with an interactive feature made for its customers.</p></div><article class="feature-card"><img src="../el-dogo-preview/assets/spa-pets.jpg" width="900" height="700" alt="Three small dogs photographed in a spa-inspired setting"><div class="feature-copy"><span>FEATURED CONCEPT / PET CARE</span><h3>EL DOGO<br><em>Pet Grooming</em></h3><p>Soft editorial visuals, a calm and welcoming experience, and an interactive grooming guide that makes taking the next step feel personal.</p><a class="button" href="el-dogo/">Explore the interactive preview <span aria-hidden="true">↗</span></a><small class="feature-note">Independent design concept, not EL DOGO's official website. Demonstration prices are illustrative only.</small></div></article></div></section>
+    <section class="closing"><div class="shell"><div class="eyebrow" style="color:#597a8e">MAKE THE FIRST IMPRESSION COUNT</div><h2>Your business has a story.<br><em>Let's make it felt.</em></h2><p>A website should look great, move smoothly, and help someone decide to take the next step.</p><a class="button" href="../contact.html">Start a project <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="footer"><div class="shell"><span>© 2026 MOONRISE HOUSE, LLC · COLORADO-BASED CREATIVE STUDIO</span><a href="../index.html">Back to Moonrise House ↗</a></div></footer>
+</body>
+</html>
