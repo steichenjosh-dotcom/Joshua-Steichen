@@ -5,10 +5,10 @@ By Moonrise House, LLC · October 2026
 
 - Showcase + launch prices: https://www.joshuasteichen.com/moonrise-living/
 - Mallow + Moss — pet spa concept + grooming estimator: https://www.joshuasteichen.com/moonrise-living/mallow-moss/
-- Form Nine — automotive concept + visual finish simulator: https://www.joshuasteichen.com/moonrise-living/form-nine/
+- Form Nine — automotive concept + four-package detailing service selector: https://www.joshuasteichen.com/moonrise-living/form-nine/
 - Sable & Soft — wellness concept + ritual finder: https://www.joshuasteichen.com/moonrise-living/sable-soft/
 - Paper & Pleat — black/cream fashion concept + interactive lookbook: https://www.joshuasteichen.com/moonrise-living/paper-pleat/
-- Nookside Kitchen — neighborhood restaurant concept + dietary-aware dish finder and order handoff: https://www.joshuasteichen.com/moonrise-living/nookside-kitchen/
+- Nookside Kitchen — neighborhood restaurant concept + 17-item text menu, dietary-aware dish finder, online-order and reservation link demos: https://www.joshuasteichen.com/moonrise-living/nookside-kitchen/
 
 All five featured brands are **fictional**, not actual clients or operating businesses. There is no real checkout or booking. The pet prices and wellness recommendations are illustrative; the automotive comparison uses photographic styling filters, not a real detailing result. Never present these concepts as completed paid client engagements.
 
@@ -19,10 +19,10 @@ The legacy /moonrise-living/el-dogo/ page now redirects to fictional Mallow + Mo
 - shared/living.css — responsive styling, typography, visual themes and lightweight animations.
 - shared/living.js — navigation, reveals, accessibility and configurable grooming estimator. The isConcept flag makes copied summaries explicitly fictional.
 - mallow-moss/index.html — client configuration using shared styling/behavior.
-- form-nine/index.html — automotive styling + local compare effect.
+- form-nine/index.html — premium automotive styling + four-button package selector with dynamic sample pricing, service details, included items and duration.
 - sable-soft/index.html — wellness styling + local ritual finder.
 - paper-pleat/index.html — fashion styling + local lookbook UI; updated to high-contrast black/cream with stronger display type.
-- nookside-kitchen/index.html — neighborhood restaurant styling, three sample dishes, a dietary-aware dish recommender and order buttons with a safe fictional fallback.
+- nookside-kitchen/index.html — neighborhood restaurant styling, three featured dishes, 17 sample menu items, a dietary-aware dish recommender, and ordering/reservation CTAs with safe fictional fallbacks.
 - index.html — portfolio home, four links, introductory pricing.
 
 The non-pet sites presently use unique, standalone CSS and JS to demonstrate very different art direction. Future efficiencies will come from extracting repeated functions and refining the handoff process; these are portfolio prototypes, not a one-click website factory.
@@ -35,14 +35,15 @@ The non-pet sites presently use unique, standalone CSS and JS to demonstrate ver
 
 Use 50% upfront deposit, two consolidated revision rounds, a written page/feature/content scope, and final payment before handoff. Domain, hosting, ongoing maintenance, asset licensing, photography/video production, ecommerce and external integrations are additional. Do not promise dynamic booking, full online store, real AI agent or advanced custom software at those prices. Track production hours so introductory pricing does not erode profit.
 
-## Restaurant order link integration
+## Restaurant ordering and reservation link integration
 
 1. Before going live, get the restaurant's ACTUAL guest-facing pickup and delivery URLs from the owner (Toast, Square, ChowNow, etc). Never guess URLs.
 2. Edit the Nookside template's inline JavaScript near its end: `const ORDER_LINKS={pickup:"",delivery:""};`.
 3. Put the verified HTTPS URLs inside the quoted strings. Leave a channel blank if not supported by the restaurant; customize or remove its button for production instead of implying the option is available.
 4. When configured, all buttons labeled Order Pickup / Order Delivery open the correct existing ordering page in a new tab. If blank, the fictional demo buttons open an informative modal and make NO order.
-5. Replace the fictional menu photos, pricing, ingredients, vegetarian/vegan tags and brand name with approved assets. The finder does not validate allergies, cross-contact or availability; add a disclaimer and confirm all menu dietary claims with the owner.
-6. Test on a real phone, complete a test checkout through the real provider, and get the owner's approval before launch.
+5. Set the Nookside file's `const RESERVATION_LINK = "";` to the restaurant's verified booking page (e.g., their actual OpenTable, Resy, or Toast Tables URL). With no URL configured, the button opens an honest demo notice — no tables have been held, no availability checked. Do not fabricate times, providers or booking links.
+6. Replace the fictional menu photos, pricing, ingredients, vegetarian/vegan tags and brand name with approved assets. The finder does not validate allergies, cross-contact or availability; add a disclaimer and confirm all menu dietary claims with the owner.
+7. Test on a real phone, complete a test checkout through the real provider, and get the owner's approval before launch.
 
 **Important:** No custom cart, payment processing, POS integration, backend, or chargeable monthly API calls are needed for the link-out implementation. Building a true checkout would be a separate paid project.
 
