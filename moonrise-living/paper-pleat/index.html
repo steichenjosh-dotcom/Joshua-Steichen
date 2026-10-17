@@ -29,64 +29,82 @@ footer{padding:30px 0;background:var(--pink)}.foot{display:flex;justify-content:
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 
-/* v3 / Bold fashion editorial: cobalt, ink, cream and coral — no pastel-pink/neon-yellow palette */
-:root{--pink:#f7f2e9;--baby:#f5e9df;--lemon:#ff8065;--blue:#2846d3;--ink:#171a20;--pale:#fffaf2;--accent:#ec7056;--line:#262a343a}
-.concept{background:#161b24;color:#f9efe6;font-weight:700}
-.header{background:#f7f2e9;border-bottom:2px solid #1e2632}
-.header-left,.header-right{color:#20232b;font-weight:700}
-.wordmark{font-family:var(--serif);font-weight:800;letter-spacing:-.06em;color:#1d2332}
-.wordmark span{color:var(--blue)}
-.header-cta{border-color:#1d2431;background:#fff8f0}
-.header-cta:hover{background:#ffe0d3}
-.hero{background:#2846d3;border-bottom:2px solid #1b2231}
-.hero-eyebrow{color:#fff0d5}
-.hero h1{font-family:var(--serif);font-weight:800;line-height:.94;letter-spacing:-.067em;color:#fffaf1;text-shadow:0 1px 0 #1d285022}
-.hero h1 em{font-weight:700;color:#ffa58c}
-.hero-copy p{color:#f7f1e8;font-size:14px;font-weight:500;line-height:1.85}
-.hero-photo{border-color:#fffaf2;background:#edbd9c;border-radius:42% 42% 5px 5px}
-.hero-photo:after{content:"";position:absolute;inset:13px;border:1px solid #ffffff80;pointer-events:none;border-radius:42% 42% 0 0}
-.sticker{background:#ff8468;border-color:#1b2030;color:#141a21;box-shadow:7px 7px 0 #f8e9cf;font-weight:700}
-.button{background:#171a20;color:#fff9f1;border-color:#171a20}
-.button:hover{background:#38404b;color:white}
-.hero .button{background:#fff5e9;color:#171f34;border-color:#fff5e9}
-.hero .button:hover{background:#ffb9a0;border-color:#ffb9a0}
-.button-light{background:#f9f1e8;color:#13191f;border-color:#1d2330}
-.button-light:hover{background:#ff8c75;color:#171b20}
-.marquee{background:#171a24;border-bottom:2px solid #171a24;color:#f9f0e4}
-.marquee i{color:#ff8065;font-size:20px}
-.section{background:#fffaf2}
-.kicker{color:#2846d3}
+/* v4 / Soft editorial palette: sea-glass, evergreen, ivory, muted clay.
+   Keep the bold fashion typography, remove high-saturation color fields.
+   Key text/background combinations meet WCAG AA normal-text contrast. */
+:root{
+  --pink:#f4ede4;
+  --baby:#f2ebe2;
+  --lemon:#e5b9a5;
+  --blue:#31564f;
+  --ink:#203130;
+  --pale:#faf6ef;
+  --accent:#885047;
+  --line:#20313030;
+}
+body{background:var(--pale);color:var(--ink)}
+.concept{background:#314d48;color:#faf6ef;font-size:10px;font-weight:700}
+.header{background:#f4ede4;border-bottom:1px solid #556a625c}
+.header-left,.header-right{color:#203130;font-weight:700}
+.header-left a,.header-right a{color:#203130}
+.wordmark{font-family:var(--serif);font-weight:800;letter-spacing:-.06em;color:#203130}
+.wordmark span{color:#885047}
+.header-cta{border-color:#31564f;background:#faf6ef;color:#203130}
+.header-cta:hover{background:#e9d8c8}
+.hero{background:#c4d8d4;border-bottom:1px solid #6d8b845c}
+.hero-eyebrow{color:#31564f;font-weight:700}
+.hero h1{font-family:var(--serif);font-weight:800;line-height:.94;letter-spacing:-.067em;color:#203130;text-shadow:none}
+.hero h1 em{font-weight:700;color:#885047}
+.hero-copy p{color:#344d47;font-size:14px;font-weight:500;line-height:1.9}
+.hero-photo{border-color:#f9f3e9;background:#c5d3c9;border-radius:42% 42% 5px 5px}
+.hero-photo:after{content:"";position:absolute;inset:13px;border:1px solid #faf6ef94;pointer-events:none;border-radius:42% 42% 0 0}
+.sticker{background:#e5b9a5;border-color:#203130;color:#203130;box-shadow:7px 7px 0 #f3ece3;font-weight:700}
+.button{background:#31564f;color:#fff;border-color:#31564f}
+.button:hover{background:#254139;border-color:#254139;color:#fff}
+.hero .button{background:#31564f;color:#fff;border-color:#31564f}
+.hero .button:hover{background:#254139;border-color:#254139;color:#fff}
+.button-light{background:#faf6ef;color:#203130;border-color:#31564f}
+.button-light:hover{background:#e8c8b6;border-color:#31564f;color:#203130}
+.marquee{background:#314d48;border-bottom:1px solid #314d48;color:#faf6ef}
+.marquee i{color:#e5b9a5;font-size:20px}
+.section{background:#faf6ef}
+.kicker{color:#31564f}
 h2,.section-top h2,.editorial-copy h2{font-family:var(--serif);font-weight:800;letter-spacing:-.062em}
-.section-top h2 em,.editorial-copy h2 em{color:#2846d3}
-.section-top p{color:#50515b}
+.section-top h2 em,.editorial-copy h2 em{color:#885047}
+.section-top p{color:#52635f}
 .tabs{margin-bottom:35px}
-.filter{border-color:#798097;background:#fffdfa;font-weight:700}
-.filter[aria-pressed=true],.filter:hover{background:#2846d3;color:#fff;border-color:#2846d3}
-.look-image{background:#ebddce}
-.look:nth-child(2) .look-image{background:#d9e0f6}
-.look:nth-child(3) .look-image{background:#f0d9c8}
-.look:nth-child(4) .look-image{background:#d5ddec}
-.look:nth-child(5) .look-image{background:#ece2ce}
-.look:nth-child(6) .look-image{background:#c9d2e9}
-.look-badge{background:#fef7ed;color:#151a25;font-size:10px}
-.look-info{border-top:2px solid #1d2030}
-.look-info h3{font-family:var(--serif);font-weight:800;letter-spacing:-.035em;color:#171b22}
-.look-info p{color:#4e515b;font-weight:600}
-.save{color:#2846d3;border-color:#73788d;background:#fffaf2}
-.save:hover,.save[aria-pressed=true]{background:#ff9b85;color:#171b20;border-color:#171b20}
-.bag-bar{background:#2846d3;color:#fffdf8;box-shadow:0 -6px 28px #0d1b6c55}
-.bag-label span{color:#ffb69e}
-.bag-bar button{background:#fff5e9;color:#17203d}
-.bag-bar button:hover{background:#ffaf93}
-.bag-status{color:#fff0e8}
-.editorial{background:#ffd6c9;border-top:2px solid #1e2432;border-bottom:2px solid #1e2432}
-.editorial-copy h2{color:#202331}
-.editorial-copy h2 em{color:#2846d3}
-.editorial-copy p{color:#41424b;font-weight:500}
-.editorial-img{background:#e6c7bd}
-footer{background:#f7f2e9}
-.foot{color:#293248}
-@media(max-width:700px){.hero h1{font-size:clamp(68px,15vw,108px);line-height:.99}.wordmark{font-size:26px}.section-top h2{font-size:clamp(60px,12.7vw,96px)}.hero-photo{border-radius:40% 40% 0 0}}
+.filter{border-color:#80948d;background:#fffdf8;color:#203130;font-weight:700}
+.filter[aria-pressed=true],.filter:hover{background:#31564f;color:#fff;border-color:#31564f}
+.look-image{background:#e7dbd1}
+.look:nth-child(2) .look-image{background:#d9e5df}
+.look:nth-child(3) .look-image{background:#e8d7c9}
+.look:nth-child(4) .look-image{background:#d6e0df}
+.look:nth-child(5) .look-image{background:#e9e1d4}
+.look:nth-child(6) .look-image{background:#dce4e1}
+.look-badge{background:#faf6ef;color:#203130;font-size:10px}
+.look-info{border-top:2px solid #365048}
+.look-info h3{font-family:var(--serif);font-weight:800;letter-spacing:-.035em;color:#203130}
+.look-info p{color:#52625d;font-weight:600}
+.save{color:#31564f;border-color:#82948e;background:#faf6ef}
+.save:hover,.save[aria-pressed=true]{background:#e5b9a5;color:#203130;border-color:#31564f}
+.bag-bar{background:#314d48;color:#faf6ef;box-shadow:0 -5px 24px #20313027}
+.bag-label span{color:#efd1bd}
+.bag-bar button{background:#faf6ef;color:#203130}
+.bag-bar button:hover{background:#e5b9a5;color:#203130}
+.bag-status{color:#f5eee7}
+.editorial{background:#e7d9ca;border-top:1px solid #566a615c;border-bottom:1px solid #566a615c}
+.editorial-copy h2{color:#203130}
+.editorial-copy h2 em{color:#885047}
+.editorial-copy p{color:#41554c;font-weight:500}
+.editorial-img{background:#d7c3b4}
+footer{background:#f4ede4}
+.foot{color:#31564f}
+@media(max-width:700px){
+  .hero h1{font-size:clamp(68px,15vw,108px);line-height:.99}
+  .wordmark{font-size:26px}
+  .section-top h2{font-size:clamp(60px,12.7vw,96px)}
+  .hero-photo{border-radius:40% 40% 0 0}
+}
 </style>
 </head>
 <body>
