@@ -1,74 +1,53 @@
-# Moonrise Living — reusable premium website system (v1)
+# Moonrise Living — Interactive Website Portfolio
+By Moonrise House, LLC · October 2026
 
-Built by Moonrise House, LLC.
+## Four fictional portfolio examples
 
-**Purpose:** Build cinematic, accessible, mobile-friendly websites quickly from a small shared set of components, and give each business ONE useful, industry-specific interaction instead of overbuilding.
+- Showcase + launch prices: https://www.joshuasteichen.com/moonrise-living/
+- Mallow + Moss — pet spa concept + grooming estimator: https://www.joshuasteichen.com/moonrise-living/mallow-moss/
+- Form Nine — automotive concept + visual finish simulator: https://www.joshuasteichen.com/moonrise-living/form-nine/
+- Sable & Soft — wellness concept + ritual finder: https://www.joshuasteichen.com/moonrise-living/sable-soft/
+- Paper & Pleat — fashion concept + interactive lookbook: https://www.joshuasteichen.com/moonrise-living/paper-pleat/
 
-## First working concept
+All featured brands are **fictional**, not actual clients or operating businesses. There is no real checkout or booking. The pet prices and wellness recommendations are illustrative; the automotive comparison uses photographic styling filters, not a real detailing result. Never present these concepts as completed paid client engagements.
 
-- [EL DOGO — upgraded Moonrise Living demo](https://www.joshuasteichen.com/moonrise-living/el-dogo/)
-- [Existing EL DOGO client preview](https://www.joshuasteichen.com/el-dogo-preview/) (untouched)
-- EL DOGO source images remain in ../../el-dogo-preview/assets/.
-
-This is an independent design concept, **not** EL DOGO's official site.
+The legacy /moonrise-living/el-dogo/ page now redirects to fictional Mallow + Moss. The separate original /el-dogo-preview/ pitch page remains **unchanged**, but is not promoted in the public Moonrise Living portfolio.
 
 ## File map
 
-- shared/living.css — typography, motion, layout primitives, responsive styling, visual themes
-- shared/living.js — mobile navigation, scroll reveals, accessible interactive estimator, inquiry-copy flow
-- el-dogo/index.html — client-specific branding, content, imagery and estimator configuration
+- shared/living.css — responsive styling, typography, visual themes and lightweight animations.
+- shared/living.js — navigation, reveals, accessibility and configurable grooming estimator. The isConcept flag makes copied summaries explicitly fictional.
+- mallow-moss/index.html — client configuration using shared styling/behavior.
+- form-nine/index.html — automotive styling + local compare effect.
+- sable-soft/index.html — wellness styling + local ritual finder.
+- paper-pleat/index.html — fashion styling + local lookbook UI.
+- index.html — portfolio home, four links, introductory pricing.
 
-The experience runs as static HTML/CSS/JS with **no build tools, subscriptions, third-party code library, server, or database**.
+The non-pet sites presently use unique, standalone CSS and JS to demonstrate very different art direction. Future efficiencies will come from extracting repeated functions and refining the handoff process; these are portfolio prototypes, not a one-click website factory.
 
-## Three design skins
+## Proposed introductory offers (first 3 paying websites)
 
-Set the HTML attribute to select a visual palette:
+- Starter — $595: responsive single page, up to five sections, contact option, restrained motion.
+- Business — $995: up to three pages, more tailored design, SEO basics, one simple interaction.
+- Living — $1,495: premium cinematic styling, modest motion and one custom lightweight interactive feature.
 
-- data-theme="spa" — sage, cream, Playfair + DM Sans (current EL DOGO concept)
-- data-theme="bold" — warm terracotta and editorial contrast (future boutiques / lifestyle)
-- data-theme="modern" — crisp slate and blue (future services / contractors)
+Use 50% upfront deposit, two consolidated revision rounds, a written page/feature/content scope, and final payment before handoff. Domain, hosting, ongoing maintenance, asset licensing, photography/video production, ecommerce and external integrations are additional. Do not promise dynamic booking, full online store, real AI agent or advanced custom software at those prices. Track production hours so introductory pricing does not erode profit.
 
-These are *color-system starting points*, not three finished distinct layouts. Each vertical should have its own composition, imagery and content while retaining the shared functional engine.
+## Lead generation, in order
 
-## Add a second customer
+1. Review all four concepts on phone and desktop. Fix missing images, copy, and interactions before sharing.
+2. Choose ten relevant business prospects; send a short, tailored observation and **the matching fictional concept**.
+3. If a business expresses interest, create a limited customized hero/preview using approved assets, not a free fully built website.
+4. Quote a fixed scope, collect the Square deposit, then complete and test the paid site.
+5. Collect the balance, hand off, and offer an optional maintenance plan.
+6. Ask permission to publish real work and testimonials after delivery.
 
-1. Duplicate **el-dogo/index.html** into **client-slug/index.html**.
-2. Update business name, hero headline, location, real services, links, reviews, imagery and alt text.
-3. Change data-theme and any approved client-specific CSS variables.
-4. Replace the inline MOONRISE_LIVING configuration with the customer's verified services and pricing; reuse or adapt the shared interactive module.
-5. Use the same shared/living.css and shared/living.js in the sibling path.
-6. Test mobile widths (375, 768, 1440px), links, keyboard focus, contrast and reduced-motion preference.
-7. Review client content and approve any charges, quotes or service guarantees before launch.
-8. Launch to a NEW preview URL. Do not overwrite a previously approved client design without direction.
+## Production safeguards
 
-## Honest demo pricing
-
-EL DOGO pricing values in the configuration are **illustrative placeholders only**, and the page labels them clearly. Do not use them on an official business website. Actual rates, add-ons, policies and availability require approval by the business owner. We intentionally do not collect pet owner information or process bookings here. "Copy visit details" simply copies a draft message to the visitor's clipboard; the visitor chooses whether to send it via the business Facebook page.
-
-## Quick turnaround workflow
-
-- Lead research & brand audit: 20–30 minutes.
-- Personalized hero + one signature interaction: target 60–120 minutes after the engine is finalized.
-- Send **homepage preview only** as an independent concept; avoid building a full custom site before a paid deposit.
-- After deposit: complete services, reviews, contact, mobile QA, SEO basics and launch.
-- Offer optional recurring maintenance, agreed content updates and reporting. Define revision limits and deliverables in the proposal.
-
-Targets are operational goals, not guaranteed billable times.
-
-## Business safeguards
-
-- No "Call Now" or click-to-call CTA.
-- No invented reviews, rates, awards, metrics or endorsements.
-- Respect prefers-reduced-motion and maintain keyboard navigation.
-- No backend or analytics scripts by default; optional gtag events only when measurement is explicitly installed.
-- Reuse approved images rather than creating unrelated or inaccurate business imagery.
-- Keep original client demos intact during experimentation.
-- For the live client version, choose professional hosting that permits commercial use; the Github path here is a design preview, not a client production deployment.
-
-## Future verticals
-
-1. Wellness/spa: choose treatment -> contact flow.
-2. Contractor: choose service/problem -> quote-ready request.
-3. Boutique: curated lookbook -> featured product inquiry.
-
-Start with one strong demo and reuse what works; avoid 3D, heavy plugins and custom AI agents unless a client separately pays for them.
+- These portfolio concepts use illustrative photos. Pet concept reuses unbranded dog images from the original repository; check rights before client commercialization.
+- Other designs currently use externally hosted Unsplash photos. Confirm image rights and host optimized local copies for real client sites.
+- Do not publicly represent real companies, logos or customer testimonials without permission.
+- No accidental click-to-call or "Call Now" CTAs.
+- Respect keyboard focus, reduced-motion preferences and phone layouts.
+- This GitHub Pages path is a preview; use appropriate hosting for commercial client projects.
+- Final live-site browser review, image loading, and third-party link checks are still required after publishing.
