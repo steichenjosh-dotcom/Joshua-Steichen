@@ -128,6 +128,23 @@
     const c = selected.coat;
     const min = Number(p.min || 0) + Number(s.min || 0) + Number(c.min || 0);
     const max = Number(p.max || 0) + Number(s.max || 0) + Number(c.max || 0);
+    if (cfg.isConcept) {
+      return {
+        min: min,
+        max: max,
+        label: escapeText(p.label) + " · " + escapeText(s.label),
+        summary: "A sample " + escapeText(s.label).toLowerCase() +
+          " visit for a " + escapeText(p.label).toLowerCase() +
+          " with a " + escapeText(c.label).toLowerCase() + " coat.",
+        text: "MOONRISE LIVING — FICTIONAL PET SPA CONCEPT\n" +
+          "Brand: " + escapeText(cfg.business || "Demo") + "\n" +
+          "Pet type: " + escapeText(p.label) + "\n" +
+          "Demo visit: " + escapeText(s.label) + "\n" +
+          "Coat: " + escapeText(c.label) + "\n" +
+          "Sample price range: " + money(min) + "–" + money(max) + "\n" +
+          "This is a design demonstration, not a real service or appointment."
+      };
+    }
     return {
       min: min,
       max: max,
@@ -197,10 +214,10 @@
         document.body.removeChild(temporary);
       }
       if (copied) {
-        if (status) status.textContent = "Copied! Paste these details into your message.";
+        if (status) status.textContent = cfg.isConcept ? "Demo details copied — no booking was submitted." : "Copied! Paste these details into your message.";
         track("living_inquiry_copied", {client:cfg.business || "demo"});
       } else {
-        if (status) status.textContent = "Copy is unavailable here. Please message the business using the link below.";
+        if (status) status.textContent = cfg.isConcept ? "Copy unavailable. You can still explore the demo." : "Copy unavailable. Please contact the business using the link below.";
       }
     });
   }
