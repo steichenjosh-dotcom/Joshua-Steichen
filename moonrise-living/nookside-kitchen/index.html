@@ -141,7 +141,55 @@
     @media(max-width:840px){.nav{min-height:76px;gap:14px}.nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:#f8f2e6;box-shadow:0 15px 27px #23372820;padding:17px 28px 26px;align-items:stretch;flex-direction:column;gap:0}.nav-links.open{display:flex}.nav-links a{padding:15px 0;border-bottom:1px solid var(--line)}.menu-toggle{display:flex;order:3}.nav-order{margin-left:auto}.hero-photo-wrap{height:470px}.hero-grid{min-height:500px}.menu-grid{gap:12px}.dish-photo{height:205px}.dish-body{padding:19px 17px}.dish-top h3{font-size:24px}.find-section,.order-section,.section{padding:75px 0}.finder{grid-template-columns:1fr}.finder-result{grid-template-columns:.75fr 1.25fr;grid-template-rows:1fr;min-height:350px}.result-image{height:100%}.result-body{padding:28px}.order-photo{height:380px}.footer-grid{grid-template-columns:1.4fr 1fr;gap:28px}}
     @media(max-width:670px){html{scroll-padding-top:78px}.shell{width:calc(100% - 38px)}.concept-bar{font-size:9px;line-height:1.4}.nav{min-height:72px}.brand{font-size:25px}.brand .dot{font-size:31px}.brand small{font-size:7px;margin-top:7px}.nav-order{font-size:10px;min-height:42px;padding:9px 14px}.menu-toggle{width:40px;height:40px}.nav-links{top:72px}.hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:0;min-height:0}.hero-copy{padding:51px 0 34px}.hero h1{font-size:clamp(60px,13vw,89px);margin:16px 0}.hero-copy>p{font-size:13px;line-height:1.8}.hero-actions{gap:10px}.hero-photo-wrap{height:365px;margin:0 -19px}.hero-photo-wrap:before{inset:0;left:18px;width:auto;height:auto;border-radius:44% 0 0 0}.hero-photo{inset:5px 0 0 19px;border-radius:44% 0 0 0}.round-stamp{width:107px;height:107px;left:23px;bottom:22px;border-width:2px;box-shadow:0 6px 0 #263e3080}.round-stamp strong{font-size:18px}.round-stamp span{font-size:16px;margin-top:2px}.hero-caption{font-size:8px;right:10px;bottom:12px}.hero-sub{margin-top:27px}.ticker .shell{min-height:55px;flex-wrap:wrap;justify-content:center;gap:8px 12px;padding:11px 0;font-size:9px}.ticker b{display:none}.section,.find-section,.order-section{padding:71px 0}.section-head{display:block;margin-bottom:25px}.section-head>p{margin-top:17px;font-size:13px}.section-head h2,h2{font-size:clamp(55px,11vw,76px)}.menu-grid{grid-template-columns:1fr;gap:17px}.dish-photo{height:240px}.dish-top h3{font-size:27px}.find-title{margin-bottom:28px}.find-title p{font-size:13px}.finder{box-shadow:6px 6px 0 #a857344c}.finder-choices{padding:30px 21px}.fieldset legend{font-size:22px}.chips{gap:7px}.choice span{font-size:11px;padding:11px 12px}.finder-result{grid-template-columns:1fr;grid-template-rows:220px auto}.result-image{height:220px}.result-body{padding:26px 23px 32px}.result-body h3{font-size:44px}.order-grid{grid-template-columns:1fr;gap:30px}.order-photo{height:300px;border-radius:4px 110px 4px 4px}.order-copy h2{font-size:62px}.order-copy p{font-size:13px}.order-actions{flex-direction:column;align-items:stretch}.order-actions a{width:100%}.footer-grid{grid-template-columns:1fr;gap:28px;padding:36px 0 25px}.copyright{display:block;text-align:center}.copyright a{display:block;margin-top:7px}.dialog-body{padding:30px 24px}.dialog-body h2{font-size:41px}.dialog-body a{margin-left:0;display:block;margin-top:20px}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
-  </style>
+  
+/* The complete restaurant menu stays textual and easy to scan. */
+.full-menu-link{display:inline-flex;gap:17px;margin-top:24px;color:var(--tomato);font-size:12px;font-weight:800;border-bottom:2px solid var(--tomato);padding:0 0 8px}
+.full-menu-link:hover{color:var(--pine)}
+.full-menu-section{background:#f2e7d2;padding:95px 0 105px}
+.full-menu-heading{display:flex;align-items:end;justify-content:space-between;gap:46px}
+.full-menu-heading h2{margin:14px 0 0}
+.full-menu-heading>p{max-width:430px;color:#5f6456;font-size:13px;line-height:1.9}
+.menu-categories{display:flex;gap:11px;flex-wrap:wrap;border-top:1px solid #cbbba0;margin:38px 0 30px;padding-top:20px}
+.menu-categories a{display:inline-flex;background:#fffaf0;border:1px solid #baa98a;color:var(--pine);padding:11px 23px;border-radius:30px;font-size:11px;font-weight:800;transition:background .2s}
+.menu-categories a:hover{background:#f4ce86}
+.full-menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.menu-category{padding:33px 35px 24px;background:#fffcf6;border:1px solid #dbcdb6;border-radius:12px;scroll-margin-top:108px}
+.menu-category-top{display:flex;align-items:center;gap:18px;border-bottom:2px solid #cfc1aa;padding:0 0 15px}
+.menu-number{color:var(--tomato);font-size:9px;letter-spacing:.09em;line-height:1.4;font-weight:800;white-space:nowrap}
+.menu-category h3{font:800 clamp(33px,3.4vw,48px)/1.1 var(--serif);letter-spacing:-.04em;color:#334c39}
+.menu-items{margin:0}
+.menu-item{padding:17px 0;border-bottom:1px solid #e6ddcd}
+.menu-item:last-child{border:0;padding-bottom:6px}
+.menu-item dt{display:flex;justify-content:space-between;align-items:baseline;gap:18px;color:#283e31}
+.menu-item dt span{font-size:14px;font-weight:800;line-height:1.35}
+.menu-item dt strong{font-size:13px;color:var(--tomato);white-space:nowrap;font-weight:800}
+.menu-item dd{margin:6px 0 0;font-size:11px;line-height:1.75;color:#656b60;padding-right:16px}
+.menu-diet{font-size:9px;font-weight:800;letter-spacing:.08em;color:#3c6744;padding-left:5px}
+.menu-footer{display:flex;align-items:center;justify-content:space-between;gap:35px;margin-top:31px;border-top:1px solid #c9b998;padding-top:24px}
+.menu-footer>div{max-width:725px}
+.menu-footer strong{font-size:12px;color:#2b4232}
+.menu-footer p{font-size:11px;line-height:1.8;color:#656757;margin-top:6px}
+.menu-footer .button{white-space:nowrap}
+.reservation-section{background:#e7e6d5;overflow:hidden;padding:100px 0}
+.reservation-grid{display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:7%}
+.reservation-copy h2{font-size:clamp(58px,6.4vw,90px);margin:16px 0 21px}
+.reservation-copy>p:not(.reservation-disclaimer){font-size:14px;line-height:1.88;color:#5f6556;max-width:520px}
+.reservation-details{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:32px 0 28px;max-width:600px}
+.reservation-details>div{display:grid;grid-template-columns:38px 1fr;gap:2px 8px;border-top:1px solid #b9c3ae;padding-top:17px}
+.reservation-details span{font-size:12px;color:var(--tomato);font-weight:800;grid-row:span 2}
+.reservation-details strong{font-size:12px;color:#344a39}
+.reservation-details small{font-size:11px;color:#697263;line-height:1.65}
+.reservation-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.reservation-disclaimer{font-size:10px;line-height:1.75;color:#727865;margin-top:19px;max-width:520px}
+.reservation-art{height:535px;position:relative;border-radius:48% 48% 6px 6px;overflow:visible}
+.reservation-art img{border-radius:48% 48% 6px 6px;background:#d5bea0}
+.reservation-stamp{position:absolute;bottom:23px;left:-56px;width:150px;height:150px;border-radius:50%;background:#eaba69;border:3px solid #3a4d38;color:#2e4535;display:grid;place-content:center;text-align:center;box-shadow:4px 8px 0 #33483260;transform:rotate(-11deg);font:800 29px/.95 var(--serif)}
+.reservation-stamp span{font-size:18px;margin-top:7px}
+@media(max-width:1070px){.nav-links{gap:17px}.nav-links a{font-size:11px}}
+@media(max-width:960px){.nav-links{gap:12px}.nav-links a{font-size:10px}.full-menu-section,.reservation-section{padding:78px 0}.menu-category{padding:28px 22px}.reservation-grid{gap:5%}.reservation-art{height:430px}.reservation-stamp{width:105px;height:105px;left:-30px;font-size:22px}}
+@media(max-width:840px){.nav-links{gap:0}.nav-links a{font-size:13px}.full-menu-grid{gap:13px}.menu-category h3{font-size:36px}.reservation-grid{grid-template-columns:1fr}.reservation-art{height:320px;max-width:590px;margin:35px auto 0;width:calc(100% - 40px)}}
+@media(max-width:670px){.full-menu-section,.reservation-section{padding:71px 0}.full-menu-heading{display:block}.full-menu-heading p{margin-top:18px}.menu-categories{gap:8px;margin-top:25px}.menu-categories a{padding:10px 16px}.full-menu-grid{grid-template-columns:1fr;gap:13px}.menu-category{padding:28px 23px 20px}.menu-category h3{font-size:40px}.menu-footer{flex-direction:column;align-items:stretch;gap:20px}.menu-footer .button{align-self:stretch}.reservation-copy h2{font-size:clamp(53px,12vw,74px)}.reservation-details{gap:12px}.reservation-details>div{grid-template-columns:1fr}.reservation-details span{grid-row:auto}.reservation-actions{flex-direction:column;align-items:stretch}.reservation-actions a{width:100%}.reservation-art{height:300px}.reservation-stamp{left:-12px;bottom:13px}}
+</style>
 </head>
 <body>
 <a href="#main" class="skip">Skip to content</a>
@@ -149,7 +197,7 @@
 <header class="site-header">
   <div class="shell nav">
     <a class="brand" href="#home" aria-label="Nookside Kitchen home">nookside<span class="dot">.</span><small>NEIGHBORHOOD KITCHEN</small></a>
-    <nav class="nav-links" id="main-nav" aria-label="Main menu"><a href="#menu">Menu</a><a href="#find">Find Your Plate</a><a href="#story">Our Story</a><a href="#order">Order Online</a></nav>
+    <nav class="nav-links" id="main-nav" aria-label="Main menu"><a href="#menu">Favorites</a><a href="#full-menu">Full Menu</a><a href="#find">Find Your Plate</a><a href="#order">Order Online</a><a href="#reserve">Reservations</a></nav>
     <a class="pill-btn nav-order" href="#order" data-order="pickup">Order Pickup <span aria-hidden="true">↗</span></a>
     <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false"><span></span><span></span></button>
   </div>
@@ -177,8 +225,60 @@
    <article class="menu-card"><div class="dish-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=82" width="850" height="650" alt="Fresh colorful salad with seasonal vegetables"><span class="dish-badge">FRESH & BRIGHT</span></div><div class="dish-body"><div class="dish-top"><h3>The Market Bowl</h3><strong>$15</strong></div><p>Seasonal vegetables, tender grains, greens, and a bright herb dressing.</p></div></article>
   </div>
   <p class="small-note">All menu items, ingredients and prices shown are invented for this portfolio example. Actual restaurants would supply their verified menu and dietary information.</p>
+  <a href="#full-menu" class="full-menu-link">View Full Menu <span aria-hidden="true">↓</span></a>
  </div>
 </section>
+
+<section class="full-menu-section" id="full-menu" aria-labelledby="full-menu-title">
+  <div class="shell">
+    <div class="full-menu-heading">
+      <div><span class="eyebrow">PLENTY TO LOVE</span><h2 id="full-menu-title">The whole <em>menu.</em></h2></div>
+      <p>All the neighborhood favorites in one easy-to-read place. Choose a category to jump straight to what sounds good.</p>
+    </div>
+    <nav class="menu-categories" aria-label="Full menu categories"><a href="#starters">Starters</a><a href="#mains">Mains</a><a href="#sides">Sides</a><a href="#drinks">Drinks</a></nav>
+    <div class="full-menu-grid">
+      <section class="menu-category" id="starters" aria-labelledby="starters-title">
+        <div class="menu-category-top"><span class="menu-number">01 / TO START</span><h3 id="starters-title">Starters</h3></div>
+        <dl class="menu-items">
+          <div class="menu-item"><dt><span>Crispy Brussels</span><strong>$9</strong></dt><dd>Roasted brussels, lemon, and a little chili crunch. <span class="menu-diet">V</span></dd></div>
+          <div class="menu-item"><dt><span>Tomato Soup</span><strong>$8</strong></dt><dd>A cozy bowl of slow-simmered tomato with toasted sourdough. <span class="menu-diet">V</span></dd></div>
+          <div class="menu-item"><dt><span>Garlic Flatbread</span><strong>$10</strong></dt><dd>Warm flatbread, roasted garlic, herbs, and whipped ricotta. <span class="menu-diet">V</span></dd></div>
+          <div class="menu-item"><dt><span>House Wings</span><strong>$13</strong></dt><dd>Crisp chicken wings with a choice of sweet heat or smoky BBQ.</dd></div>
+        </dl>
+      </section>
+      <section class="menu-category" id="mains" aria-labelledby="mains-title">
+        <div class="menu-category-top"><span class="menu-number">02 / THE MAIN EVENT</span><h3 id="mains-title">Mains</h3></div>
+        <dl class="menu-items">
+          <div class="menu-item"><dt><span>The Nookside Burger</span><strong>$16</strong></dt><dd>Cheddar, house sauce, pickles, lettuce, and a toasted bun.</dd></div>
+          <div class="menu-item"><dt><span>House Flatbread</span><strong>$17</strong></dt><dd>Tomato, mozzarella, fresh basil, and golden crust. <span class="menu-diet">V</span></dd></div>
+          <div class="menu-item"><dt><span>The Market Bowl</span><strong>$15</strong></dt><dd>Grains, seasonal greens, vegetables, and herb dressing. <span class="menu-diet">VG</span></dd></div>
+          <div class="menu-item"><dt><span>Crispy Chicken Sandwich</span><strong>$16</strong></dt><dd>Buttermilk-style fried chicken, slaw, and house pickles.</dd></div>
+          <div class="menu-item"><dt><span>Sunday Mac</span><strong>$14</strong></dt><dd>Creamy baked macaroni with a golden breadcrumb top. <span class="menu-diet">V</span></dd></div>
+        </dl>
+      </section>
+      <section class="menu-category" id="sides" aria-labelledby="sides-title">
+        <div class="menu-category-top"><span class="menu-number">03 / SOMETHING EXTRA</span><h3 id="sides-title">Sides</h3></div>
+        <dl class="menu-items">
+          <div class="menu-item"><dt><span>Hand-Cut Fries</span><strong>$5</strong></dt><dd>Golden and lightly seasoned. <span class="menu-diet">VG</span></dd></div>
+          <div class="menu-item"><dt><span>Side Greens</span><strong>$6</strong></dt><dd>Mixed greens with a bright house vinaigrette. <span class="menu-diet">VG</span></dd></div>
+          <div class="menu-item"><dt><span>Roasted Vegetables</span><strong>$6</strong></dt><dd>Seasonal vegetables with herbs and lemon. <span class="menu-diet">VG</span></dd></div>
+          <div class="menu-item"><dt><span>Warm Cornbread</span><strong>$5</strong></dt><dd>Honey butter and sea salt. <span class="menu-diet">V</span></dd></div>
+        </dl>
+      </section>
+      <section class="menu-category" id="drinks" aria-labelledby="drinks-title">
+        <div class="menu-category-top"><span class="menu-number">04 / SOMETHING TO SIP</span><h3 id="drinks-title">Drinks</h3></div>
+        <dl class="menu-items">
+          <div class="menu-item"><dt><span>House Lemonade</span><strong>$4</strong></dt><dd>Fresh lemon, light sweetness, and plenty of ice.</dd></div>
+          <div class="menu-item"><dt><span>Unsweetened Iced Tea</span><strong>$4</strong></dt><dd>A simple, refreshing classic.</dd></div>
+          <div class="menu-item"><dt><span>Seasonal Fizz</span><strong>$5</strong></dt><dd>A rotating, fruity sparkling refresher.</dd></div>
+          <div class="menu-item"><dt><span>Cold Brew Coffee</span><strong>$5</strong></dt><dd>Smooth, chilled, and ready when you are.</dd></div>
+        </dl>
+      </section>
+    </div>
+    <div class="menu-footer"><div><strong>A little note about the menu</strong><p>Every dish and price is fictional. V = illustrative vegetarian; VG = illustrative vegan. A real restaurant must verify ingredients, allergens, preparation and availability.</p></div><a href="#order" class="button" data-order="pickup">Order Pickup <span aria-hidden="true">↗</span></a></div>
+  </div>
+</section>
+
 <section class="find-section" id="find">
  <div class="shell">
   <div class="find-title"><span class="eyebrow">CAN'T DECIDE? WE'VE GOT YOU.</span><h2>Find your <em>plate.</em></h2><p>Pick what sounds good and we'll suggest a dish from our sample menu. A little interactive help that makes browsing more fun.</p></div>
@@ -210,9 +310,30 @@
   </div>
  </div>
 </section>
+
+<section class="reservation-section" id="reserve" aria-labelledby="reserve-heading">
+  <div class="shell reservation-grid">
+    <div class="reservation-copy">
+      <span class="eyebrow">PULL UP A CHAIR</span>
+      <h2 id="reserve-heading">There's always<br><em>room for you.</em></h2>
+      <p>Catch up over dinner, gather the family, or make a regular Tuesday feel like an occasion. A real Nookside-style restaurant can connect this section straight to its existing reservation platform.</p>
+      <div class="reservation-details" aria-label="Restaurant reservation options">
+        <div><span>01</span><strong>Choose your people.</strong><small>Couples, friends, or the whole family.</small></div>
+        <div><span>02</span><strong>Pick your date.</strong><small>The reservation platform confirms real availability.</small></div>
+      </div>
+      <div class="reservation-actions"><a href="#reserve" class="button" data-reserve>Reserve a Table <span aria-hidden="true">↗</span></a><a href="#full-menu" class="outline-btn">View Full Menu <span aria-hidden="true">↗</span></a></div>
+      <p class="reservation-disclaimer">Demonstration only — Nookside Kitchen is fictional. No dates, times or available tables are being offered here. Live restaurant reservations would open a verified booking provider.</p>
+    </div>
+    <div class="reservation-art">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=82" width="900" height="1050" alt="Warmly lit neighborhood restaurant tables ready for guests">
+      <div class="reservation-stamp" aria-hidden="true">Save<br>a seat.<span>✳</span></div>
+    </div>
+  </div>
+</section>
+
 </main>
 <footer class="footer">
- <div class="shell"><div class="footer-grid"><div><div class="footer-logo">nookside<span>.</span></div><p>Fictional neighborhood restaurant brand, designed as a portfolio example by Moonrise House. No orders or reservations are available here.</p></div><div><h3>EXPLORE THE CONCEPT</h3><a href="#menu">View Menu</a><a href="#find">Find Your Plate</a><a href="#order">Online Ordering Demo</a></div><div><h3>BUILT BY MOONRISE HOUSE</h3><p>Want your neighborhood restaurant to look this inviting — and link seamlessly to real ordering?</p><a href="../../contact.html">Start a Restaurant Website ↗</a></div></div><div class="copyright"><span>NOOKSIDE KITCHEN · FICTIONAL BRAND / DEMO MENU & PRICES · © 2026 MOONRISE HOUSE</span><a href="../">Explore all Moonrise Living concepts ↗</a></div></div>
+ <div class="shell"><div class="footer-grid"><div><div class="footer-logo">nookside<span>.</span></div><p>Fictional neighborhood restaurant brand, designed as a portfolio example by Moonrise House. No orders or reservations are available here.</p></div><div><h3>EXPLORE THE CONCEPT</h3><a href="#menu">View Menu</a><a href="#full-menu">Full Menu</a><a href="#find">Find Your Plate</a><a href="#order">Online Ordering Demo</a><a href="#reserve">Reservations</a></div><div><h3>BUILT BY MOONRISE HOUSE</h3><p>Want your neighborhood restaurant to look this inviting — and link seamlessly to real ordering?</p><a href="../../contact.html">Start a Restaurant Website ↗</a></div></div><div class="copyright"><span>NOOKSIDE KITCHEN · FICTIONAL BRAND / DEMO MENU & PRICES · © 2026 MOONRISE HOUSE</span><a href="../">Explore all Moonrise Living concepts ↗</a></div></div>
 </footer>
 <dialog id="order-dialog" aria-labelledby="order-dialog-title"><div class="dialog-body"><span class="eyebrow">ONLINE ORDERING DEMONSTRATION</span><h2 id="order-dialog-title">Just a preview.</h2><p id="order-dialog-text">This is a fictional restaurant, so no orders can be placed. A real website would connect this button to the restaurant's existing online ordering page.</p><button type="button" class="close" id="close-dialog">Close</button><a href="../../contact.html">Ask Moonrise House about ordering ↗</a></div></dialog>
 <script>
@@ -270,6 +391,23 @@
     });
   }
  });
+
+ const RESERVATION_LINK = ""; // Verified client booking URL, e.g. their official OpenTable/Resy/Toast Tables page.
+ document.querySelectorAll("[data-reserve]").forEach(link=>{
+   if(isVerifiedHttps(RESERVATION_LINK)){
+     link.href=RESERVATION_LINK;
+     link.target="_blank";link.rel="noopener noreferrer";
+   }else{
+     link.addEventListener("click",evt=>{
+       evt.preventDefault();
+       el("#order-dialog-title").textContent="Reservations are a demo.";
+       el("#order-dialog-text").textContent="Nookside Kitchen is fictional. No availability has been checked and no table has been held or booked. For a real restaurant website, this button opens the restaurant's verified reservation page, where the guest selects an available date, time and party size.";
+       if(typeof dialog.showModal==="function")dialog.showModal();
+       else window.alert("Reservations are a demo. No table has been booked.");
+     });
+   }
+ });
+
  close.addEventListener("click",()=>dialog.close());
  dialog.addEventListener("click",function(evt){if(evt.target===dialog)dialog.close()});
  const toggle=el("#menu-toggle"),nav=el("#main-nav");
