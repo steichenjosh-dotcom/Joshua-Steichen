@@ -1,16 +1,16 @@
 # Moonrise Living — Interactive Website Portfolio (v2)
 By Moonrise House, LLC · October 2026
 
-## Four fictional portfolio examples
+## Five fictional portfolio examples
 
 - Showcase + launch prices: https://www.joshuasteichen.com/moonrise-living/
 - Mallow + Moss — pet spa concept + grooming estimator: https://www.joshuasteichen.com/moonrise-living/mallow-moss/
 - Form Nine — automotive concept + four-package detailing service selector: https://www.joshuasteichen.com/moonrise-living/form-nine/
 - Sable & Soft — wellness concept + ritual finder: https://www.joshuasteichen.com/moonrise-living/sable-soft/
-- Paper & Pleat — black/cream fashion concept + interactive lookbook: https://www.joshuasteichen.com/moonrise-living/paper-pleat/
+- Paper & Pleat — bold cobalt/coral fashion concept + interactive lookbook: https://www.joshuasteichen.com/moonrise-living/paper-pleat/
 - Nookside Kitchen — neighborhood restaurant concept + 17-item text menu, dietary-aware dish finder, online-order and reservation link demos: https://www.joshuasteichen.com/moonrise-living/nookside-kitchen/
 
-All five featured brands are **fictional**, not actual clients or operating businesses. There is no real checkout or booking. The pet prices and wellness recommendations are illustrative; the automotive comparison uses photographic styling filters, not a real detailing result. Never present these concepts as completed paid client engagements.
+All five featured brands are **fictional**, not actual clients or operating businesses. There is no real checkout or booking. The pet prices and wellness recommendations are illustrative; the automotive package prices, timings, and inclusions are examples, not actual offers. Never present these concepts as completed paid client engagements.
 
 The legacy /moonrise-living/el-dogo/ page now redirects to fictional Mallow + Moss. The separate original /el-dogo-preview/ pitch page remains **unchanged**, but is not promoted in the public Moonrise Living portfolio.
 
@@ -49,11 +49,11 @@ Use 50% upfront deposit, two consolidated revision rounds, a written page/featur
 
 ## Changes requested in review
 
-- Mallow + Moss: header logo smaller with more padding; straightforward buttons; Large Dog option; professional Short Coat, Medium Coat, and Long / Double Coat descriptions.
-- Form Nine: larger full-width visual simulator, closer auto detail photograph, stronger base/enhanced difference and visible drag handle; photographic filters still explicitly NOT a real service before/after.
+- Mallow + Moss: header logo smaller with more padding; straightforward buttons; Large Dog option; professional coat options; smaller hero badge repositioned in the lower-left negative space away from faces.
+- Form Nine: removed the image simulator. The four-package selector shows sample inclusions, starting prices and illustrative appointment duration.
 - Sable & Soft: no changes.
-- Paper & Pleat: black-and-cream high-fashion palette with muted clay accent and heavier readable display typography.
-- Nookside Kitchen: new approachable neighborhood restaurant category and demo ordering buttons.
+- Paper & Pleat: preserved the bold typography while moving to a more vivid cobalt, coral, ivory and ink palette.
+- Nookside Kitchen: preserved three featured dishes; added a 17-item four-category text menu and a reservation section with provider-ready button. Both ordering and booking are fictional demonstrations until verified client URLs are installed.
 
 ## Lead generation, in order
 
