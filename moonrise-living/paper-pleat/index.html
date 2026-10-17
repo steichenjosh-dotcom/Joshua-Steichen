@@ -28,52 +28,65 @@ footer{padding:30px 0;background:var(--pink)}.foot{display:flex;justify-content:
 @media(max-width:400px){.look-image{height:215px}.look-info h3{font-size:20px}.look-info{gap:5px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
-/* v2: high-fashion clean — ink, ivory, muted clay. Stronger type, clearer contrast. */
-.concept{background:#21201e;color:#f8f3ec}
-.header{background:var(--pink);border-bottom:1px solid #8a847c}
-.wordmark{font-family:var(--serif);font-weight:800;letter-spacing:-.055em}
-.wordmark span{color:var(--accent)}
-.header-cta{border-color:var(--ink)}
-.header-cta:hover{background:#ded0c0}
-.hero{background:linear-gradient(135deg,#f7f4ee 0%,#efeae1 100%);border-bottom:1px solid #8a847c}
-.hero-eyebrow{color:#6a5343}
-.hero h1{font-family:var(--serif);font-weight:700;line-height:.95;letter-spacing:-.067em;color:#171a18}
-.hero h1 em{color:#8d6753}
-.hero-copy p{font-size:14px;line-height:1.85;color:#47423e}
-.button{background:#1d1d1b;border-color:#1d1d1b;color:#fffaf2}
-.button:hover{background:#3a3631}
-.button-light{background:#e0cdb8;color:#191a19;border-color:#191a19}
-.button-light:hover{background:#fff9f0;color:#191a19}
-.hero-photo{border-color:#1c1d1b;background:#d0c4b6}
-.sticker{background:#ded0bd;border-color:#211f1c;color:#282521;box-shadow:7px 7px 0 #25221f;font-weight:700}
-.marquee{background:#24231f;border-color:#24231f;color:#f6f0e7}
-.marquee i{color:#d6af90}
-.kicker{color:#6b5040}
-h2,.section-top h2,.editorial-copy h2{font-family:var(--serif);font-weight:700;letter-spacing:-.055em}
-.section-top h2 em,.editorial-copy h2 em{color:#8f6a55}
-.section-top p{color:#4d4845}
-.filter[aria-pressed=true],.filter:hover{background:#262421;color:#fff;border-color:#262421}
-.look-image{background:#e2dcd4}
-.look:nth-child(2) .look-image{background:#e5ded4}
-.look:nth-child(3) .look-image{background:#e8e1d7}
-.look:nth-child(4) .look-image{background:#e0d7cb}
-.look:nth-child(5) .look-image{background:#e1dfd9}
-.look:nth-child(6) .look-image{background:#e2d8ca}
-.look-badge{background:#f9f6f0;color:#21201d}
-.look-info{border-top:2px solid #24231f}
-.look-info h3{font-family:var(--serif);font-weight:700;letter-spacing:-.045em;color:#1b1c1a}
-.look-info p{color:#55514a}
-.save{color:#1c1d1c;border-color:#6c6862}
-.save:hover,.save[aria-pressed=true]{background:#e0cdb8;border-color:#292623}
-.bag-bar{background:#24221f;box-shadow:0 -5px 30px #13120e38}
-.bag-label span{color:#e1c3a8}
-.bag-bar button{background:#e0cdb8;color:#1d1c1b}
-.bag-status{color:#f0dfce}
-.editorial{background:#ede6db;border-color:#27231f}
-.editorial-copy p{color:#4f4b44}
-footer{background:#e9e2d8}
-.foot{color:#33302c}
-@media(max-width:700px){.hero h1{font-size:clamp(69px,15vw,108px)}.section-top h2{font-size:clamp(64px,12.7vw,97px)}.wordmark{font-size:26px}}
+
+/* v3 / Bold fashion editorial: cobalt, ink, cream and coral — no pastel-pink/neon-yellow palette */
+:root{--pink:#f7f2e9;--baby:#f5e9df;--lemon:#ff8065;--blue:#2846d3;--ink:#171a20;--pale:#fffaf2;--accent:#ec7056;--line:#262a343a}
+.concept{background:#161b24;color:#f9efe6;font-weight:700}
+.header{background:#f7f2e9;border-bottom:2px solid #1e2632}
+.header-left,.header-right{color:#20232b;font-weight:700}
+.wordmark{font-family:var(--serif);font-weight:800;letter-spacing:-.06em;color:#1d2332}
+.wordmark span{color:var(--blue)}
+.header-cta{border-color:#1d2431;background:#fff8f0}
+.header-cta:hover{background:#ffe0d3}
+.hero{background:#2846d3;border-bottom:2px solid #1b2231}
+.hero-eyebrow{color:#fff0d5}
+.hero h1{font-family:var(--serif);font-weight:800;line-height:.94;letter-spacing:-.067em;color:#fffaf1;text-shadow:0 1px 0 #1d285022}
+.hero h1 em{font-weight:700;color:#ffa58c}
+.hero-copy p{color:#f7f1e8;font-size:14px;font-weight:500;line-height:1.85}
+.hero-photo{border-color:#fffaf2;background:#edbd9c;border-radius:42% 42% 5px 5px}
+.hero-photo:after{content:"";position:absolute;inset:13px;border:1px solid #ffffff80;pointer-events:none;border-radius:42% 42% 0 0}
+.sticker{background:#ff8468;border-color:#1b2030;color:#141a21;box-shadow:7px 7px 0 #f8e9cf;font-weight:700}
+.button{background:#171a20;color:#fff9f1;border-color:#171a20}
+.button:hover{background:#38404b;color:white}
+.hero .button{background:#fff5e9;color:#171f34;border-color:#fff5e9}
+.hero .button:hover{background:#ffb9a0;border-color:#ffb9a0}
+.button-light{background:#f9f1e8;color:#13191f;border-color:#1d2330}
+.button-light:hover{background:#ff8c75;color:#171b20}
+.marquee{background:#171a24;border-bottom:2px solid #171a24;color:#f9f0e4}
+.marquee i{color:#ff8065;font-size:20px}
+.section{background:#fffaf2}
+.kicker{color:#2846d3}
+h2,.section-top h2,.editorial-copy h2{font-family:var(--serif);font-weight:800;letter-spacing:-.062em}
+.section-top h2 em,.editorial-copy h2 em{color:#2846d3}
+.section-top p{color:#50515b}
+.tabs{margin-bottom:35px}
+.filter{border-color:#798097;background:#fffdfa;font-weight:700}
+.filter[aria-pressed=true],.filter:hover{background:#2846d3;color:#fff;border-color:#2846d3}
+.look-image{background:#ebddce}
+.look:nth-child(2) .look-image{background:#d9e0f6}
+.look:nth-child(3) .look-image{background:#f0d9c8}
+.look:nth-child(4) .look-image{background:#d5ddec}
+.look:nth-child(5) .look-image{background:#ece2ce}
+.look:nth-child(6) .look-image{background:#c9d2e9}
+.look-badge{background:#fef7ed;color:#151a25;font-size:10px}
+.look-info{border-top:2px solid #1d2030}
+.look-info h3{font-family:var(--serif);font-weight:800;letter-spacing:-.035em;color:#171b22}
+.look-info p{color:#4e515b;font-weight:600}
+.save{color:#2846d3;border-color:#73788d;background:#fffaf2}
+.save:hover,.save[aria-pressed=true]{background:#ff9b85;color:#171b20;border-color:#171b20}
+.bag-bar{background:#2846d3;color:#fffdf8;box-shadow:0 -6px 28px #0d1b6c55}
+.bag-label span{color:#ffb69e}
+.bag-bar button{background:#fff5e9;color:#17203d}
+.bag-bar button:hover{background:#ffaf93}
+.bag-status{color:#fff0e8}
+.editorial{background:#ffd6c9;border-top:2px solid #1e2432;border-bottom:2px solid #1e2432}
+.editorial-copy h2{color:#202331}
+.editorial-copy h2 em{color:#2846d3}
+.editorial-copy p{color:#41424b;font-weight:500}
+.editorial-img{background:#e6c7bd}
+footer{background:#f7f2e9}
+.foot{color:#293248}
+@media(max-width:700px){.hero h1{font-size:clamp(68px,15vw,108px);line-height:.99}.wordmark{font-size:26px}.section-top h2{font-size:clamp(60px,12.7vw,96px)}.hero-photo{border-radius:40% 40% 0 0}}
 </style>
 </head>
 <body>
@@ -81,7 +94,7 @@ footer{background:#e9e2d8}
 <div class="concept">PAPER & PLEAT IS A FICTIONAL BOUTIQUE · A PORTFOLIO CONCEPT BY MOONRISE HOUSE · NO REAL PRODUCTS FOR SALE</div>
 <header class="header"><div class="shell header-bar"><nav class="header-left" aria-label="Sections"><a href="#edit">The edit</a><a href="#about">Our world</a></nav><a class="wordmark" href="#top">paper <span>&</span> pleat</a><nav class="header-right" aria-label="Other pages"><a href="#edit">Lookbook</a><a class="header-cta" href="#edit">Explore the edit ↗</a></nav></div></header>
 <main id="main">
-<section class="hero" id="top"><div class="shell hero-grid"><div class="hero-copy"><span class="hero-eyebrow">PLAYFUL BY NATURE / STYLED YOUR WAY</span><h1>Wear your<br><em>own</em> story.</h1><p>Color outside the lines. Dress for the day you want. A fashion concept with just enough surprise to make ordinary feel extraordinary.</p><a class="button" href="#edit">Shop the imaginary edit <span aria-hidden="true">↗</span></a></div><div class="hero-art"><div class="hero-photo"><img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85" width="900" height="1100" alt="Editorial fashion portrait in an urban setting"></div><div class="sticker">wear<br>more<br>you! ✳</div></div></div></section>
+<section class="hero" id="top"><div class="shell hero-grid"><div class="hero-copy"><span class="hero-eyebrow">PLAYFUL BY NATURE / STYLED YOUR WAY</span><h1>Wear your<br><em>own</em> story.</h1><p>Color outside the lines. Dress for the day you want. A fashion concept with just enough surprise to make ordinary feel extraordinary.</p><a class="button" href="#edit">Browse the Lookbook <span aria-hidden="true">↗</span></a></div><div class="hero-art"><div class="hero-photo"><img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85" width="900" height="1100" alt="Editorial fashion portrait in an urban setting"></div><div class="sticker">wear<br>more<br>you! ✳</div></div></div></section>
 <div class="marquee"><div class="shell"><span>MORE COLOR</span><i>✳</i><span>MORE PERSONALITY</span><i>✳</i><span>MORE YOU</span><i>✳</i><span>LESS ORDINARY</span></div></div>
 <section class="section" id="edit"><div class="shell"><div class="section-top"><div><span class="kicker">THE INTERACTIVE EDIT / VOL. 01</span><h2>Find your <em>fit.</em></h2></div><p>Browse a fictional capsule, filter by mood, and save pieces to your own mini lookbook. No checkout, no fake inventory — just an interactive way to explore a boutique concept.</p></div>
 <div class="tabs" role="group" aria-label="Filter the lookbook"><button type="button" class="filter" data-filter="all" aria-pressed="true">All the good stuff</button><button type="button" class="filter" data-filter="everyday" aria-pressed="false">Everyday</button><button type="button" class="filter" data-filter="statement" aria-pressed="false">Statement</button><button type="button" class="filter" data-filter="after-hours" aria-pressed="false">After hours</button></div>
