@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#f8f2e6">
+  <meta name="description" content="Nookside Kitchen is a fictional neighborhood restaurant website concept by Moonrise House, with a menu, interactive dish finder and adaptable order links.">
+  <title>Nookside Kitchen — Good Food, Good Company | Moonrise Living Concept</title>
+  <link rel="icon" type="image/png" href="../../assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <style>
+    :root{--cream:#f8f2e6;--butter:#efc775;--sun:#edb951;--tomato:#ab432c;--tomato-dark:#85341f;--ink:#272b26;--pine:#364c3c;--muted:#5e6358;--line:#d8cbb6;--light:#fffcf6;--serif:"Fraunces",Georgia,serif;--sans:"DM Sans",Arial,sans-serif;--ease:cubic-bezier(.24,.8,.25,1)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:100px}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%;width:100%;height:100%;object-fit:cover}
+    h1,h2,h3,p{margin:0}
+    button,input{font:inherit}
+    button{cursor:pointer}
+    a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--tomato);outline-offset:4px}
+    .skip{position:fixed;left:15px;top:-90px;background:white;padding:13px 16px;z-index:99}.skip:focus{top:12px}
+    .shell{width:min(1220px,calc(100% - 92px));margin:auto}
+    .concept-bar{min-height:30px;display:grid;place-items:center;background:#2c3d31;color:#fff2df;text-align:center;font-size:10px;letter-spacing:.075em;padding:7px 12px;font-weight:700;line-height:1.5}
+    .site-header{background:rgba(248,242,230,.94);backdrop-filter:blur(15px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30}
+    .nav{min-height:91px;display:flex;align-items:center;gap:28px;justify-content:space-between}
+    .brand{white-space:nowrap;font:800 32px/.85 var(--serif);letter-spacing:-.075em;color:#2f493a}
+    .brand .dot{color:var(--tomato);font-size:43px;line-height:0}
+    .brand small{display:block;margin-top:8px;letter-spacing:.24em;font:700 9px var(--sans);text-align:center;color:var(--tomato)}
+    .nav-links{display:flex;align-items:center;justify-content:center;gap:31px;margin-left:auto}
+    .nav-links a{font-size:12px;font-weight:700;color:#324539}
+    .nav-links a:hover{text-decoration:underline;text-underline-offset:5px}
+    .pill-btn,.button,.outline-btn{display:inline-flex;align-items:center;justify-content:center;gap:18px;border-radius:100px;min-height:49px;padding:13px 23px;border:2px solid var(--tomato);font-size:12px;line-height:1.2;font-weight:800;transition:background .2s,transform .2s,border-color .2s;text-align:center}
+    .pill-btn,.button{background:var(--tomato);color:white}
+    .pill-btn:hover,.button:hover{background:var(--tomato-dark);border-color:var(--tomato-dark);transform:translateY(-2px)}
+    .pill-btn span,.button span,.outline-btn span{font-size:19px;font-weight:400;line-height:.8}
+    .outline-btn{background:transparent;color:var(--tomato)}
+    .outline-btn:hover{background:#f5e2ce;transform:translateY(-2px)}
+    .nav-order{white-space:nowrap;font-size:11px}
+    .menu-toggle{display:none;background:transparent;border:1px solid var(--ink);border-radius:50%;width:43px;height:43px;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+    .menu-toggle span{width:18px;height:2px;background:var(--ink);display:block}
+    .eyebrow{font-size:11px;font-weight:800;letter-spacing:.2em;line-height:1.55;color:var(--tomato)}
+    .hero{position:relative;overflow:hidden;background:var(--cream)}
+    .hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:4%;align-items:center;min-height:610px}
+    .hero-copy{position:relative;padding:75px 0 90px;z-index:1}
+    .hero h1{font:800 clamp(69px,7.3vw,108px)/.97 var(--serif);letter-spacing:-.062em;color:#2c4535;margin:23px 0 23px}
+    .hero h1 em{color:var(--tomato);font-style:italic}
+    .hero-copy>p{max-width:405px;color:#535c51;font-size:15px;line-height:1.83;margin:0 0 30px}
+    .hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+    .hero-sub{margin-top:42px;display:flex;align-items:center;gap:13px;color:#68705e;font-size:10px;font-weight:800;letter-spacing:.13em}
+    .hero-sub i{font-style:normal;font-size:18px;color:var(--tomato)}
+    .hero-photo-wrap{height:590px;position:relative;display:flex;align-items:center;justify-content:center;margin-right:calc((1220px - min(1220px,100vw - 92px))/-2)}
+    .hero-photo-wrap:before{content:"";position:absolute;width:690px;height:680px;left:-45px;top:-27px;border-radius:48% 0 0 48%;background:#ead29d}
+    .hero-photo{position:absolute;inset:17px 0 0 30px;border-radius:46% 0 0 9px;overflow:hidden;background:#b36835;box-shadow:-10px 18px 0 #b4523544}
+    .hero-photo img{object-position:center 57%;transition:transform 1s var(--ease)}
+    .hero-photo:hover img{transform:scale(1.035)}
+    .round-stamp{position:absolute;z-index:2;width:156px;height:156px;left:-53px;bottom:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;background:var(--sun);border:3px solid #324334;color:#263d2e;text-align:center;transform:rotate(-12deg);box-shadow:0 9px 0 #263e3080}
+    .round-stamp strong{font:800 27px/.93 var(--serif);letter-spacing:-.06em}.round-stamp span{font-size:23px;margin-top:8px}
+    .hero-caption{position:absolute;right:20px;bottom:25px;color:white;font-size:10px;letter-spacing:.12em;font-weight:800;text-shadow:0 2px 7px #000a}
+    .ticker{background:var(--pine);color:#f8e9c8;overflow:hidden}
+    .ticker .shell{min-height:63px;display:flex;align-items:center;justify-content:space-between;gap:17px;font-size:11px;letter-spacing:.12em;font-weight:800}
+    .ticker b{color:var(--sun);font-size:19px}
+    .section{padding:105px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:42px;margin-bottom:40px}
+    h2{font:800 clamp(57px,6.3vw,87px)/1.02 var(--serif);letter-spacing:-.059em}
+    h2 em{color:var(--tomato)}
+    .section-head h2{margin-top:14px}
+    .section-head>p{max-width:405px;font-size:14px;line-height:1.8;color:#5c6258}
+    .menu-section{background:var(--light)}
+    .menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .menu-card{min-width:0;border:1px solid var(--line);background:var(--cream);border-radius:13px;overflow:hidden;transition:transform .24s,box-shadow .24s}
+    .menu-card:hover{transform:translateY(-5px);box-shadow:0 12px 25px #1e322012}
+    .dish-photo{height:267px;overflow:hidden;background:#c9b28f;position:relative}
+    .dish-photo img{transition:transform .7s;object-position:center}
+    .menu-card:hover .dish-photo img{transform:scale(1.055)}
+    .dish-badge{position:absolute;top:16px;left:16px;background:#fff6e4;color:#344536;padding:9px 13px;border-radius:30px;font-size:10px;font-weight:800}
+    .dish-body{padding:22px 23px 25px}
+    .dish-top{display:flex;align-items:start;justify-content:space-between;gap:10px}
+    .dish-top h3{font:800 28px/1.12 var(--serif);letter-spacing:-.05em;color:#2d4234}
+    .dish-top strong{font-size:13px;color:var(--tomato);white-space:nowrap;margin-top:5px}
+    .dish-body p{font-size:12px;line-height:1.8;color:#626659;margin-top:12px}
+    .small-note{font-size:11px;line-height:1.7;color:#77766f;margin-top:18px}
+    .find-section{background:var(--butter);padding:96px 0 105px;position:relative}
+    .find-section:before{content:"✳";position:absolute;font:800 230px var(--serif);right:2%;top:14px;color:#ffffff3b;pointer-events:none}
+    .find-title{position:relative;z-index:1;margin-bottom:43px}
+    .find-title h2{max-width:760px;margin:13px 0}
+    .find-title p{max-width:575px;font-size:14px;line-height:1.8;color:#584d3d}
+    .finder{display:grid;grid-template-columns:1fr 1.02fr;overflow:hidden;background:#fffaf1;border:2px solid #2f4233;box-shadow:12px 12px 0 #a857344c;border-radius:13px}
+    .finder-choices{padding:45px 44px}
+    .fieldset{border:0;padding:0;margin:0 0 30px}
+    .fieldset:last-child{margin:0}
+    .fieldset legend{font:700 24px/1.2 var(--serif);letter-spacing:-.035em;margin-bottom:17px}
+    .fieldset legend span{font:800 10px var(--sans);color:var(--tomato);margin-right:10px;letter-spacing:.14em}
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .choice{cursor:pointer;position:relative}
+    .choice input{position:absolute;opacity:0;width:1px;height:1px}
+    .choice span{display:inline-flex;align-items:center;justify-content:center;padding:13px 17px;background:transparent;border:1.5px solid #b1aa95;border-radius:50px;min-height:44px;font-size:12px;font-weight:800;color:#3a4237;transition:background .2s,color .2s}
+    .choice:hover span{border-color:var(--tomato)}
+    .choice input:checked+span{background:var(--pine);border-color:var(--pine);color:white}
+    .choice input:focus-visible+span{outline:3px solid var(--tomato);outline-offset:3px}
+    .finder-result{position:relative;background:var(--pine);color:#fffaf0;display:grid;grid-template-columns:1fr;grid-template-rows:235px auto;min-height:510px}
+    .result-image{height:235px;overflow:hidden;background:#8b9e75}
+    .result-image img{width:100%;height:100%;object-fit:cover;object-position:center}
+    .result-body{padding:26px 39px 39px;display:flex;flex-direction:column;align-items:flex-start}
+    .result-eyebrow{color:#f9cf83;font-size:10px;letter-spacing:.17em;font-weight:800}
+    .result-body h3{font:800 clamp(40px,3.5vw,55px)/1.05 var(--serif);letter-spacing:-.05em;margin:11px 0}
+    .result-body>p{font-size:12px;line-height:1.8;color:#e2eadd;max-width:370px}
+    .result-meta{display:flex;align-items:center;gap:16px;margin:16px 0 22px;font-weight:800;font-size:12px;color:#f9d897}
+    .result-price{font-size:19px}
+    .result-body .button{background:#f1ce80;border-color:#f1ce80;color:#273d30;margin-top:auto}
+    .result-body .button:hover{background:white;border-color:white}
+    .result-no-match{color:#f7d1bb;line-height:1.75}
+    .order-section{background:var(--cream);padding:103px 0}
+    .order-grid{display:grid;grid-template-columns:.96fr 1.04fr;gap:8%;align-items:center}
+    .order-photo{position:relative;height:420px;border-radius:6px 160px 6px 6px;overflow:hidden;background:#b87b43}
+    .order-photo img{object-position:center}
+    .order-copy h2{margin:16px 0 20px}
+    .order-copy p{font-size:14px;line-height:1.9;color:#5a6055;max-width:450px;margin-bottom:28px}
+    .order-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:19px}
+    .order-copy small{display:block;font-size:11px;line-height:1.75;color:#787a6e;max-width:450px}
+    .footer{background:#2c4032;color:#f4eedf}
+    .footer-grid{padding:48px 0 30px;display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:35px;border-bottom:1px solid #ffffff38}
+    .footer-logo{font:800 32px var(--serif);letter-spacing:-.06em}
+    .footer-logo span{color:#f0c46f}
+    .footer p{font-size:12px;line-height:1.75;color:#d7dfd0;margin-top:13px}
+    .footer h3{font-size:12px;letter-spacing:.09em;margin:0 0 13px}
+    .footer a{font-size:12px;display:block;margin-bottom:12px;text-decoration:underline;text-underline-offset:4px}
+    .footer a:hover{color:#f6d18e}
+    .copyright{padding:24px 0;display:flex;align-items:center;justify-content:space-between;gap:25px;color:#bcd0b9;font-size:10px;line-height:1.7}
+    dialog{border:2px solid var(--pine);padding:0;max-width:500px;width:calc(100% - 32px);border-radius:15px;box-shadow:0 30px 110px #0007;background:var(--cream);color:var(--ink)}
+    dialog::backdrop{background:#0e241ad1}
+    .dialog-body{padding:39px 39px 35px}
+    .dialog-body h2{font-size:45px;margin:13px 0}
+    .dialog-body p{font-size:13px;line-height:1.85;color:#4d5c4e;margin:0 0 21px}
+    .dialog-body .close{background:var(--tomato);color:white;font-size:12px;border:0;border-radius:50px;padding:13px 25px;font-weight:800}
+    .dialog-body a{display:inline-block;margin-left:13px;font-size:12px;font-weight:800;text-decoration:underline}
+    @media(max-width:1130px){.shell{width:calc(100% - 64px)}.nav-links{gap:17px}.hero-grid{min-height:570px}.hero h1{font-size:clamp(66px,7.6vw,92px)}.hero-photo-wrap{height:550px;margin-right:-32px}.round-stamp{width:134px;height:134px;left:-38px}.round-stamp strong{font-size:23px}.finder-choices{padding:35px 30px}.order-grid{gap:5%}}
+    @media(max-width:840px){.nav{min-height:76px;gap:14px}.nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:#f8f2e6;box-shadow:0 15px 27px #23372820;padding:17px 28px 26px;align-items:stretch;flex-direction:column;gap:0}.nav-links.open{display:flex}.nav-links a{padding:15px 0;border-bottom:1px solid var(--line)}.menu-toggle{display:flex;order:3}.nav-order{margin-left:auto}.hero-photo-wrap{height:470px}.hero-grid{min-height:500px}.menu-grid{gap:12px}.dish-photo{height:205px}.dish-body{padding:19px 17px}.dish-top h3{font-size:24px}.find-section,.order-section,.section{padding:75px 0}.finder{grid-template-columns:1fr}.finder-result{grid-template-columns:.75fr 1.25fr;grid-template-rows:1fr;min-height:350px}.result-image{height:100%}.result-body{padding:28px}.order-photo{height:380px}.footer-grid{grid-template-columns:1.4fr 1fr;gap:28px}}
+    @media(max-width:670px){html{scroll-padding-top:78px}.shell{width:calc(100% - 38px)}.concept-bar{font-size:9px;line-height:1.4}.nav{min-height:72px}.brand{font-size:25px}.brand .dot{font-size:31px}.brand small{font-size:7px;margin-top:7px}.nav-order{font-size:10px;min-height:42px;padding:9px 14px}.menu-toggle{width:40px;height:40px}.nav-links{top:72px}.hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:0;min-height:0}.hero-copy{padding:51px 0 34px}.hero h1{font-size:clamp(60px,13vw,89px);margin:16px 0}.hero-copy>p{font-size:13px;line-height:1.8}.hero-actions{gap:10px}.hero-photo-wrap{height:365px;margin:0 -19px}.hero-photo-wrap:before{inset:0;left:18px;width:auto;height:auto;border-radius:44% 0 0 0}.hero-photo{inset:5px 0 0 19px;border-radius:44% 0 0 0}.round-stamp{width:107px;height:107px;left:23px;bottom:22px;border-width:2px;box-shadow:0 6px 0 #263e3080}.round-stamp strong{font-size:18px}.round-stamp span{font-size:16px;margin-top:2px}.hero-caption{font-size:8px;right:10px;bottom:12px}.hero-sub{margin-top:27px}.ticker .shell{min-height:55px;flex-wrap:wrap;justify-content:center;gap:8px 12px;padding:11px 0;font-size:9px}.ticker b{display:none}.section,.find-section,.order-section{padding:71px 0}.section-head{display:block;margin-bottom:25px}.section-head>p{margin-top:17px;font-size:13px}.section-head h2,h2{font-size:clamp(55px,11vw,76px)}.menu-grid{grid-template-columns:1fr;gap:17px}.dish-photo{height:240px}.dish-top h3{font-size:27px}.find-title{margin-bottom:28px}.find-title p{font-size:13px}.finder{box-shadow:6px 6px 0 #a857344c}.finder-choices{padding:30px 21px}.fieldset legend{font-size:22px}.chips{gap:7px}.choice span{font-size:11px;padding:11px 12px}.finder-result{grid-template-columns:1fr;grid-template-rows:220px auto}.result-image{height:220px}.result-body{padding:26px 23px 32px}.result-body h3{font-size:44px}.order-grid{grid-template-columns:1fr;gap:30px}.order-photo{height:300px;border-radius:4px 110px 4px 4px}.order-copy h2{font-size:62px}.order-copy p{font-size:13px}.order-actions{flex-direction:column;align-items:stretch}.order-actions a{width:100%}.footer-grid{grid-template-columns:1fr;gap:28px;padding:36px 0 25px}.copyright{display:block;text-align:center}.copyright a{display:block;margin-top:7px}.dialog-body{padding:30px 24px}.dialog-body h2{font-size:41px}.dialog-body a{margin-left:0;display:block;margin-top:20px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<div class="concept-bar">FICTIONAL RESTAURANT CONCEPT BY MOONRISE HOUSE — NO REAL FOOD, ORDERS OR RESERVATIONS</div>
+<header class="site-header">
+  <div class="shell nav">
+    <a class="brand" href="#home" aria-label="Nookside Kitchen home">nookside<span class="dot">.</span><small>NEIGHBORHOOD KITCHEN</small></a>
+    <nav class="nav-links" id="main-nav" aria-label="Main menu"><a href="#menu">Menu</a><a href="#find">Find Your Plate</a><a href="#story">Our Story</a><a href="#order">Order Online</a></nav>
+    <a class="pill-btn nav-order" href="#order" data-order="pickup">Order Pickup <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+<section id="home" class="hero">
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">GOOD FOOD. GOOD PEOPLE. GOOD DAYS.</span>
+      <h1>Come hungry.<br>Leave <em>happy.</em></h1>
+      <p>Your new favorite neighborhood spot, built around comfort food, fresh ingredients, and catching up with the people who matter.</p>
+      <div class="hero-actions"><a class="button" href="#menu">View Menu <span aria-hidden="true">↗</span></a><a class="outline-btn" href="#order" data-order="pickup">Order Pickup <span aria-hidden="true">↗</span></a></div>
+      <div class="hero-sub"><i aria-hidden="true">✳</i><span>COME AS YOU ARE. STAY A WHILE.</span></div>
+    </div>
+    <div class="hero-photo-wrap"><div class="hero-photo"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1500&q=85" width="900" height="1050" fetchpriority="high" alt="Juicy burger with fresh toppings photographed as casual comfort food"></div><div class="round-stamp" aria-hidden="true"><strong>pull up<br>a chair!</strong><span>☺</span></div><span class="hero-caption">SOMETHING GOOD IS ON THE MENU</span></div>
+  </div>
+</section>
+<div class="ticker"><div class="shell"><span>MADE FOR THE NEIGHBORHOOD</span><b>✳</b><span>REAL FOOD. NO FUSS.</span><b>✳</b><span>ALWAYS ROOM AT THE TABLE</span></div></div>
+<section class="section menu-section" id="menu">
+ <div class="shell">
+  <div class="section-head"><div><span class="eyebrow">GOOD STUFF, ALL DAY</span><h2>Meet the <em>favorites.</em></h2></div><p>Comfort classics, fresh sides, and a few things worth sharing. This fictional sample menu illustrates how a local restaurant can showcase its most popular dishes.</p></div>
+  <div class="menu-grid">
+   <article class="menu-card"><div class="dish-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=82" width="850" height="650" alt="Burger with lettuce, tomato and a toasted bun"><span class="dish-badge">FAN FAVORITE</span></div><div class="dish-body"><div class="dish-top"><h3>The Nookside Burger</h3><strong>$16</strong></div><p>Juicy burger, sharp cheddar, special sauce, pickles, and a toasted bun.</p></div></article>
+   <article class="menu-card"><div class="dish-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=82" width="850" height="650" alt="Pizza with basil and melted cheese"><span class="dish-badge">MADE TO SHARE</span></div><div class="dish-body"><div class="dish-top"><h3>The House Flatbread</h3><strong>$17</strong></div><p>Tomato, creamy mozzarella, basil, and a crisp golden crust.</p></div></article>
+   <article class="menu-card"><div class="dish-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=82" width="850" height="650" alt="Fresh colorful salad with seasonal vegetables"><span class="dish-badge">FRESH & BRIGHT</span></div><div class="dish-body"><div class="dish-top"><h3>The Market Bowl</h3><strong>$15</strong></div><p>Seasonal vegetables, tender grains, greens, and a bright herb dressing.</p></div></article>
+  </div>
+  <p class="small-note">All menu items, ingredients and prices shown are invented for this portfolio example. Actual restaurants would supply their verified menu and dietary information.</p>
+ </div>
+</section>
+<section class="find-section" id="find">
+ <div class="shell">
+  <div class="find-title"><span class="eyebrow">CAN'T DECIDE? WE'VE GOT YOU.</span><h2>Find your <em>plate.</em></h2><p>Pick what sounds good and we'll suggest a dish from our sample menu. A little interactive help that makes browsing more fun.</p></div>
+  <div class="finder">
+   <div class="finder-choices">
+    <fieldset class="fieldset"><legend><span>01 /</span> What are you in the mood for?</legend><div class="chips" id="mood-choices">
+     <label class="choice"><input type="radio" name="mood" value="comfort" checked><span>Comfort Food</span></label>
+     <label class="choice"><input type="radio" name="mood" value="fresh"><span>Fresh & Light</span></label>
+     <label class="choice"><input type="radio" name="mood" value="share"><span>Something to Share</span></label>
+     <label class="choice"><input type="radio" name="mood" value="any"><span>Surprise Me</span></label>
+    </div></fieldset>
+    <fieldset class="fieldset"><legend><span>02 /</span> Any food preferences?</legend><div class="chips" id="diet-choices">
+     <label class="choice"><input type="radio" name="diet" value="any" checked><span>No Preference</span></label>
+     <label class="choice"><input type="radio" name="diet" value="vegetarian"><span>Vegetarian</span></label>
+     <label class="choice"><input type="radio" name="diet" value="vegan"><span>Vegan</span></label>
+    </div></fieldset>
+    <p class="small-note">Dietary tags in this concept are illustrative, not verified food preparation or allergen information. Always confirm ingredients with a real restaurant.</p>
+   </div>
+   <div class="finder-result" aria-live="polite" aria-atomic="true"><div class="result-image"><img id="recommend-image" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=82" width="850" height="450" alt="A featured burger"></div><div class="result-body"><span class="result-eyebrow">OUR SAMPLE PICK FOR YOU</span><h3 id="recommend-title">The Nookside Burger</h3><p id="recommend-description">Juicy burger, sharp cheddar, special sauce, pickles, and a toasted bun.</p><div class="result-meta"><span class="result-price" id="recommend-price">$16</span><span id="recommend-type">COMFORT FOOD</span></div><a id="recommend-order" class="button" href="#order" data-order="pickup">Order Pickup <span aria-hidden="true">↗</span></a></div></div>
+  </div>
+ </div>
+</section>
+<section class="order-section" id="story">
+ <div class="shell order-grid">
+  <div class="order-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85" width="1000" height="850" alt="Cozy, warmly lit neighborhood restaurant dining room"></div>
+  <div class="order-copy" id="order"><span class="eyebrow">GOOD FOOD, MADE EASY</span><h2>Your table,<br><em>your way.</em></h2><p>A great local restaurant website should make the essentials effortless: see the menu, order pickup, or choose delivery. No complicated checkout system needs to be built from scratch.</p>
+   <div class="order-actions"><a href="#order" class="button" data-order="pickup">Order Pickup <span aria-hidden="true">↗</span></a><a href="#order" class="outline-btn" data-order="delivery">Order Delivery <span aria-hidden="true">↗</span></a></div>
+   <small>Portfolio demonstration: ordering is not connected. For a real client, these buttons can point straight to that restaurant's verified Toast, Square, or other ordering pages.</small>
+  </div>
+ </div>
+</section>
+</main>
+<footer class="footer">
+ <div class="shell"><div class="footer-grid"><div><div class="footer-logo">nookside<span>.</span></div><p>Fictional neighborhood restaurant brand, designed as a portfolio example by Moonrise House. No orders or reservations are available here.</p></div><div><h3>EXPLORE THE CONCEPT</h3><a href="#menu">View Menu</a><a href="#find">Find Your Plate</a><a href="#order">Online Ordering Demo</a></div><div><h3>BUILT BY MOONRISE HOUSE</h3><p>Want your neighborhood restaurant to look this inviting — and link seamlessly to real ordering?</p><a href="../../contact.html">Start a Restaurant Website ↗</a></div></div><div class="copyright"><span>NOOKSIDE KITCHEN · FICTIONAL BRAND / DEMO MENU & PRICES · © 2026 MOONRISE HOUSE</span><a href="../">Explore all Moonrise Living concepts ↗</a></div></div>
+</footer>
+<dialog id="order-dialog" aria-labelledby="order-dialog-title"><div class="dialog-body"><span class="eyebrow">ONLINE ORDERING DEMONSTRATION</span><h2 id="order-dialog-title">Just a preview.</h2><p id="order-dialog-text">This is a fictional restaurant, so no orders can be placed. A real website would connect this button to the restaurant's existing online ordering page.</p><button type="button" class="close" id="close-dialog">Close</button><a href="../../contact.html">Ask Moonrise House about ordering ↗</a></div></dialog>
+<script>
+(function(){
+ "use strict";
+ // For a paying restaurant, replace only these empty strings with the
+ // restaurant's verified, HTTPS guest-facing provider URLs.
+ // Example formats: pickup: 'https://restaurant.toasttab.com/...' or
+ // delivery: 'https://restaurant.square.site/...'. Never guess live links.
+ const ORDER_LINKS={pickup:"",delivery:""};
+ const menu=[
+  {title:"The Nookside Burger",price:"$16",desc:"Juicy burger, sharp cheddar, special sauce, pickles, and a toasted bun.",moods:["comfort"],diet:"meat",type:"COMFORT FOOD",img:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=82",alt:"Burger with fresh toppings"},
+  {title:"The House Flatbread",price:"$17",desc:"Tomato, creamy mozzarella, basil, and a crisp golden crust.",moods:["share","comfort"],diet:"vegetarian",type:"MADE TO SHARE",img:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=82",alt:"Pizza with basil and cheese"},
+  {title:"The Market Bowl",price:"$15",desc:"Seasonal vegetables, tender grains, greens, and a bright herb dressing.",moods:["fresh","comfort","share"],diet:"vegan",type:"FRESH & BRIGHT",img:"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=82",alt:"Colorful seasonal vegetable salad"}
+ ];
+ const el=(s)=>document.querySelector(s);
+ function choice(name){const input=el('input[name="'+name+'"]:checked');return input?input.value:"any"}
+ function updateRecommendation(){
+  const mood=choice("mood"),diet=choice("diet");
+  let matches=menu.filter(item=>{
+    const moodOK=mood==="any"||item.moods.includes(mood);
+    const dietOK=diet==="any"||(diet==="vegetarian" && item.diet!=="meat")||(diet==="vegan"&&item.diet==="vegan");
+    return moodOK&&dietOK;
+  });
+  // A dietary preference always takes priority over mood. Never recommend
+  // a non-vegan meal for a vegan choice just to force a result.
+  if(matches.length===0){matches=menu.filter(item=>diet==="any" || (diet==="vegetarian"&&item.diet!=="meat") || (diet==="vegan"&&item.diet==="vegan"));}
+  const item=matches[0]||null;
+  el("#recommend-title").textContent=item?item.title:"Ask About Our Menu";
+  el("#recommend-description").textContent=item?item.desc:"No matching demo dish. Please ask the restaurant about appropriate options.";
+  el("#recommend-price").textContent=item?item.price:"";
+  el("#recommend-type").textContent=item?item.type:"";
+  if(item){
+    el("#recommend-image").src=item.img;
+    el("#recommend-image").alt=item.alt;
+    el("#recommend-order").hidden=false;
+  }else{el("#recommend-order").hidden=true;}
+ }
+ document.querySelectorAll('input[name="mood"],input[name="diet"]').forEach(node=>node.addEventListener("change",updateRecommendation));
+ updateRecommendation();
+ const dialog=el("#order-dialog");
+ const close=el("#close-dialog");
+ function isVerifiedHttps(value){if(!value)return false;try{const u=new URL(value);return u.protocol==="https:" && Boolean(u.hostname) && !u.username && !u.password}catch(e){return false}}
+ document.querySelectorAll("[data-order]").forEach(link=>{
+  const channel=link.dataset.order;
+  if(isVerifiedHttps(ORDER_LINKS[channel])){
+    link.href=ORDER_LINKS[channel];link.target="_blank";link.rel="noopener noreferrer";
+  }else{
+    link.href="#order";
+    link.addEventListener("click",function(evt){
+      evt.preventDefault();
+      el("#order-dialog-title").textContent=channel==="pickup"?"Pickup is a demo.":"Delivery is a demo.";
+      el("#order-dialog-text").textContent="This is a fictional restaurant. No order has been placed. When building a real restaurant website, Moonrise House connects this button directly to the business's verified "+(channel==="pickup"?"pickup":"delivery")+" ordering page (such as Toast or Square).";
+      if(typeof dialog.showModal==="function"){dialog.showModal();}else{window.alert("This is a fictional ordering demonstration. No order has been placed.");}
+    });
+  }
+ });
+ close.addEventListener("click",()=>dialog.close());
+ dialog.addEventListener("click",function(evt){if(evt.target===dialog)dialog.close()});
+ const toggle=el("#menu-toggle"),nav=el("#main-nav");
+ if(toggle&&nav){
+  toggle.addEventListener("click",()=>{
+    const expanded=toggle.getAttribute("aria-expanded")==="true";
+    toggle.setAttribute("aria-expanded",String(!expanded));
+    toggle.setAttribute("aria-label",expanded?"Open navigation":"Close navigation");
+    nav.classList.toggle("open",!expanded);
+  });
+  nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");toggle.setAttribute("aria-expanded","false");toggle.setAttribute("aria-label","Open navigation")}));
+  document.addEventListener("keydown",e=>{if(e.key==="Escape"){nav.classList.remove("open");toggle.setAttribute("aria-expanded","false")}});
+ }
+})();
+</script>
+</body>
+</html>
