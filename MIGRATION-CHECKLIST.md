@@ -29,7 +29,7 @@ Prepared October 23, 2026. This file is a checklist, **not confirmation that dom
 3. Choose branch: josh-personal-restore; folder: /(root); Save.
 4. Keep custom domain: www.joshuasteichen.com. Verify HTTPS.
 5. Check personal Home, video demo reel, photography gallery, and contact links.
-6. Test old emailed demo URLs: /el-dogo-preview/, /healing-touch-preview/, /systems-plumbing-preview/, /hero-headquarters-preview/, /otra-preview/, and /moonrise-living/. They should lead to equivalent paths on www.moonrisehouse.com.
+6. Test old emailed demo URLs: /el-dogo-preview/, /healing-touch-preview/, /systems-plumbing-preview/, /hero-headquarters-preview/, /otra-preview/, and /moonrise-living/. They should lead to equivalent paths on www.moonrisehouse.com. The old /webdesign/ microsite should redirect to the new Moonrise Living business portfolio.
 7. Check nested old Moonrise Living concept URLs; a personal-domain 404 fallback has been prepared to redirect these.
 8. Note: fallback HTML/JS redirects are not server-side HTTP 301 redirects. Later, edge-level redirects can improve SEO if needed.
 
