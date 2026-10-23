@@ -3,12 +3,12 @@ By Moonrise House, LLC · October 2026
 
 ## Five fictional portfolio examples
 
-- Showcase + launch prices: https://www.joshuasteichen.com/moonrise-living/
-- Mallow + Moss — pet spa concept + grooming estimator: https://www.joshuasteichen.com/moonrise-living/mallow-moss/
-- Form Nine — automotive concept + four-package detailing service selector: https://www.joshuasteichen.com/moonrise-living/form-nine/
-- Sable & Soft — wellness concept + ritual finder: https://www.joshuasteichen.com/moonrise-living/sable-soft/
-- Paper & Pleat — softly colored, bold-typography fashion concept + interactive lookbook: https://www.joshuasteichen.com/moonrise-living/paper-pleat/
-- Nookside Kitchen — neighborhood restaurant concept + 17-item text menu, dietary-aware dish finder, online-order and reservation link demos: https://www.joshuasteichen.com/moonrise-living/nookside-kitchen/
+- Showcase + launch prices: https://www.moonrisehouse.com/moonrise-living/
+- Mallow + Moss — pet spa concept + grooming estimator: https://www.moonrisehouse.com/moonrise-living/mallow-moss/
+- Form Nine — automotive concept + four-package detailing service selector: https://www.moonrisehouse.com/moonrise-living/form-nine/
+- Sable & Soft — wellness concept + ritual finder: https://www.moonrisehouse.com/moonrise-living/sable-soft/
+- Paper & Pleat — softly colored, bold-typography fashion concept + interactive lookbook: https://www.moonrisehouse.com/moonrise-living/paper-pleat/
+- Nookside Kitchen — neighborhood restaurant concept + 17-item text menu, dietary-aware dish finder, online-order and reservation link demos: https://www.moonrisehouse.com/moonrise-living/nookside-kitchen/
 
 All five featured brands are **fictional**, not actual clients or operating businesses. There is no real checkout or booking. The pet prices and wellness recommendations are illustrative; the automotive package prices, timings, and inclusions are examples, not actual offers. Never present these concepts as completed paid client engagements.
 
