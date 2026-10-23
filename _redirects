@@ -1,0 +1,3 @@
+# Cloudflare Pages static redirects for renamed Moonrise Living concepts.
+/moonrise-living/el-dogo/ /moonrise-living/mallow-moss/ 301
+/moonrise-living/marlow-kitchen/ /moonrise-living/nookside-kitchen/ 301
