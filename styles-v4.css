@@ -27,3 +27,12 @@
 .logo-item{width:220px;height:126px;padding:6px;transform:scale(.78);opacity:1;transition:transform .16s ease-out;transform-origin:center;pointer-events:none!important;cursor:default!important}
 .logo-item img{width:auto;height:auto;max-width:100%;max-height:96px;object-fit:contain;filter:none;opacity:1;pointer-events:none!important}
 @media(max-width:800px){.logo-item{width:172px;height:100px}.logo-item img{max-height:76px}}
+
+/* Final portfolio polish; preserve original image framing. */
+html{scroll-padding-top:100px}a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+.hero h1,.page-head h1{line-height:.98}
+.statement h2,.feature h2,.about h2,.photo-tease h2,.contact h2,.video-list h2{line-height:1.08}
+.buttons{flex-wrap:wrap}.contact-email{overflow-wrap:anywhere;max-width:100%}
+.video-list article{scroll-margin-top:100px}
+@media(max-width:560px){header{height:auto;min-height:88px;flex-wrap:wrap;justify-content:center;gap:14px;padding:16px 18px}nav{width:100%;justify-content:center;flex-wrap:wrap;gap:12px 20px}nav a{font-size:10px}.hero-copy{left:24px;right:24px}.hero h1{font-size:clamp(56px,15vw,68px)}.page-head h1{font-size:clamp(54px,14vw,76px);letter-spacing:-1px}.contact{padding:65px 25px}.contact p{line-height:1.7}.contact-email{font-size:clamp(17px,4.8vw,25px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
