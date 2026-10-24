@@ -51,3 +51,5 @@ html{scroll-padding-top:100px}a:focus-visible,button:focus-visible{outline:2px s
 .personal-contact-form button:disabled{opacity:.6;cursor:wait}
 .contact .contact-status{font-size:13px;line-height:1.7;margin:18px 0 0;max-width:650px}
 @media(max-width:560px){.contact-fields{grid-template-columns:1fr;gap:0}}
+
+.contact h2 em{color:inherit}
