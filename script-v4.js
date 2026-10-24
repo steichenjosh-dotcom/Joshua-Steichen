@@ -99,3 +99,20 @@ document.querySelectorAll('.vimeo-player').forEach(player=>{
     player.replaceChildren(iframe);
   });
 });
+
+const contactForm=document.getElementById('personalContactForm');
+if(contactForm){
+ const status=document.getElementById('contactStatus');
+ const button=contactForm.querySelector('button[type="submit"]');
+ contactForm.addEventListener('submit',async event=>{
+  event.preventDefault();
+  if(!contactForm.reportValidity())return;
+  button.disabled=true;button.textContent='Sending…';status.textContent='Sending your message…';
+  try{
+   const response=await fetch(contactForm.action,{method:'POST',body:new FormData(contactForm),headers:{Accept:'application/json'}});
+   if(response.ok){contactForm.reset();status.textContent='Thank you! Your message was sent successfully. I’ll get back to you soon.';}
+   else{status.textContent=response.status===429?'Too many requests right now. Please wait a moment and try again.':'Your message could not be sent. Please try again, or email josh@moonrisehouse.com. Your message is still in the form.';}
+  }catch(error){status.textContent='We couldn’t confirm delivery. Please check your connection and try again, or email josh@moonrisehouse.com.';}
+  finally{button.disabled=false;button.textContent='Send message →';}
+ });
+}
