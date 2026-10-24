@@ -95,7 +95,7 @@
         ].join('\n');
         notice.dataset.state='info';
         notice.textContent='Your email app should open with a prepared draft. Please review it and click Send — this step does not submit automatically.';
-        window.location.href='mailto:steichen.josh@gmail.com?subject='+
+        window.location.href='mailto:josh@moonrisehouse.com?subject='+
           encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
         return;
       }
