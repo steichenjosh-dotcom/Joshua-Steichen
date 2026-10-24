@@ -36,3 +36,18 @@ html{scroll-padding-top:100px}a:focus-visible,button:focus-visible{outline:2px s
 .video-list article{scroll-margin-top:100px}
 @media(max-width:560px){header{height:auto;min-height:88px;flex-wrap:wrap;justify-content:center;gap:14px;padding:16px 18px}nav{width:100%;justify-content:center;flex-wrap:wrap;gap:12px 20px}nav a{font-size:10px}.hero-copy{left:24px;right:24px}.hero h1{font-size:clamp(56px,15vw,68px)}.page-head h1{font-size:clamp(54px,14vw,76px);letter-spacing:-1px}.contact{padding:65px 25px}.contact p{line-height:1.7}.contact-email{font-size:clamp(17px,4.8vw,25px)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Personal portfolio contact form */
+.personal-contact-form{max-width:800px;margin-top:36px}
+.contact-fields{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.personal-contact-form label{display:block;font-size:13px;font-weight:500;line-height:1.6;margin-bottom:24px}
+.personal-contact-form input,.personal-contact-form textarea{display:block;width:100%;font:400 16px/1.6 Inter,Arial,sans-serif;color:#111;background:rgba(255,255,255,.2);border:1px solid rgba(17,17,17,.5);border-radius:0;padding:13px 14px;margin-top:8px}
+.personal-contact-form textarea{resize:vertical;min-height:140px}
+.personal-contact-form textarea::placeholder{color:#494017;opacity:1}
+.personal-contact-form input:focus,.personal-contact-form textarea:focus{outline:2px solid #111;outline-offset:3px}
+.personal-contact-form button{background:#151515;color:#fff;border:1px solid #151515;cursor:pointer;min-height:48px;font-weight:500}
+.personal-contact-form button:hover{background:#303030}
+.personal-contact-form button:focus-visible{outline:2px solid #111;outline-offset:4px}
+.personal-contact-form button:disabled{opacity:.6;cursor:wait}
+.contact .contact-status{font-size:13px;line-height:1.7;margin:18px 0 0;max-width:650px}
+@media(max-width:560px){.contact-fields{grid-template-columns:1fr;gap:0}}
